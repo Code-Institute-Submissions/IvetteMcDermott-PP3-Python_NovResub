@@ -1,11 +1,10 @@
+import ascii_img 
+import lines_and_stories
+import sys
+import time
 import gspread
 from google.oauth2.service_account import Credentials
 
-import ascii_img 
-import lines_and_stories
-
-import sys
-import time
 
 
 SCOPE = [
@@ -71,7 +70,7 @@ def introduction():
     """ Collect the user"s name and validate it to no be empty """
     slowType("\n"
         "Now tell me your name ...\n")
-    name = input("=> ")
+    name = input("=> ").strip()
     if name != "":
         time.sleep(3)
         slowType("\n"
@@ -83,6 +82,10 @@ def introduction():
 
 
 def age():
+    """ Get user's age and validate it. Calls the next step to follow
+        if under 10, gives it a message and exit, if 100 and over gives
+        a message and ask for a valid one
+    """
     global name
     slowType("\n"f"but first, tell me your age {name}...\n")
     
@@ -122,8 +125,7 @@ def age():
 def pick_story():
     global name
     print(ascii_img.house)
-    slowType(f"{lines_and_stories.intro} {name} {lines_and_stories.intro1}
-    {lines_and_stories.intro2}")
+    slowType(f"{lines_and_stories.intro} {name} {lines_and_stories.intro1} {lines_and_stories.intro2}")
     slowType("\n"f"Tell me what do you think {name} will do?\n")
     slowType("\n"
         " 1.Draw.\n 2.Do homework.\n 3.Take a nap.\n")
