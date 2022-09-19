@@ -59,8 +59,8 @@ def slowTypeDif(data):
 
 def welcome():
     """ Display the welcome message """
-    print(f"\033[1;31;40m {ascii_img.welcome}")
-    slowType(f"\033[1;31;40m {lines_and_stories.WELC_LINE} \n")
+    print(f"\033[1;31;48m{ascii_img.welcome}")
+    slowType(f"\033[1;31;48m{lines_and_stories.WELC_LINE} \n")
     slowType("Only rule here is that you need to answer my questions \n"
     "where you see =>, so I can continue.\n")
 
@@ -72,7 +72,7 @@ def introduction():
         "Now tell me your name ...\n")
     name = input("=> ").strip()
     if name != "":
-        time.sleep(3)
+        time.sleep(1)
         slowType("\n"
             f"{name}, that name, it reminds me of a story...\n")
         age()
@@ -85,29 +85,31 @@ def age():
     """ Get user's age and validate it. Calls the next step to follow
         if under 10, gives it a message and exit, if 100 and over gives
         a message and ask for a valid one
+        Modified accorder to suggestions and guidance of my mentor Brian Macharia
     """
     global name
-    slowType("\n"f"but first, tell me your age {name}...\n")
+    slowType(f"but first, tell me your age {name}...\n")
     
     while True:
         age_input = input("=> ").strip()
         if not age_input.isdigit():
-            slowTypeF("You are not following the rules."
+            slowType("You are not following the rules."
             " You must enter a number.\n")
             continue
         age = int(age_input)
         if age > 99:
-            slowTypeF("You not following the rules."
+            slowType("You not following the rules."
             "You must enter a number less than 100.\n")
             continue
         if age < 10:
-            slowTypeF("Oh you are too young yet, sorry"
+            slowType("Oh you are too young yet, sorry"
             " I may offer you in a next time a lullaby...\n")
             slowType(ascii_img.baby)
             slowType("Bye for now...")
             sys.exit()
         else:
-            slowTypeF("ok, you are old enough but are you brave enough?\n")
+            slowType("\n"
+            "ok, you are old enough but are you brave enough?\n")
             slowType("\n"
                 "Do you want to continue? 'y' for yes or 'n' for no \n")
             answer = input("=> ")
@@ -119,70 +121,90 @@ def age():
             else:
                 slowType("\n"
                     "Seems I meet a brave one, let's start...\n")
+                clear()
                 pick_story()
 
 
 def pick_story():
+    """ Allows the user to pick the main direction of the story, choosing between 3 options """
     global name
-    print(ascii_img.house)
-    slowType(f"{lines_and_stories.intro} {name} {lines_and_stories.intro1} {lines_and_stories.intro2}")
+    print(f"\033[1;31;48m {ascii_img.house}")
+    slowType(f"{lines_and_stories.intro}\n" 
+    f"{name} {lines_and_stories.intro1}\n"
+    f"{lines_and_stories.intro2}\n")
     slowType("\n"f"Tell me what do you think {name} will do?\n")
     slowType("\n"
-        " 1.Draw.\n 2.Do homework.\n 3.Take a nap.\n")
+        " 1. Draw.\n 2. Do homework.\n 3. Take a nap.\n")
     slowType("\n"
         "Pick one (1 or 2 or 3)\n")
     stor_pick = input("=> ")
     picked = ""
+    clear()
     if int(stor_pick) == 1:
         picked = lines_and_stories.story_picked[0]
-        slowType("\n"f"You were right, {name} headed to {picked}, so went to the art room.")
+        print(f"\033[1;31;48m {ascii_img.doing_art}")
+        slowType(f"You were right, {name} headed to {picked}, so went to the studio.\n")
         story_draw()
     elif int(stor_pick) == 2:
         picked = lines_and_stories.story_picked[1]
-        slowType("\n"f"Yes, {name} headed to {picked}, so went to desk.")
+        slowType(f"Yes, {name} headed to {picked}, so went to desk.\n")
         story_kitchen()
     elif int(stor_pick) == 3:
         picked = lines_and_stories.story_picked[2]
-        slowType("\n"f"Picked right there, {name} headed to {picked}, so went to the second floor.")
+        slowType(f"Picked right there, {name} headed to {picked}, so went to the second floor.\n")
         story_closet()
     else:
-        slowType("\n""You had not pick a valid option, try again...\n")
+        slowType("You had not pick a valid option, try again...\n")
         pick_story()
 
 
 def story_draw():
+    """
+    Runs the option for the drawing story 
+    """
     global name
     draw_pick = ""
     street_pick = ""
-    slowType("\n""Every since was young\n"
-        f"{name} always had power that had kept secret... whatever drew came true!"
-        "Every day have played with Elizabeth, the best friend anyone could have,\n"
-        f"they would play on magical creations that came straight from {name}'s imagination\n"
-        "But as them got older, they grew apart."
-        f"{name} threw herself deeper into painting while Elizabeth played sports\n"
-        "and started hanging out with other friend Jessica more often\n")
-    slowType("However, the two still maintained a tradition of meeting in front of school"
-        " and walking home together until one day...\n"
-        f"{name} was waiting for long time outside for Elizabeth, but she still did not come.\n"
+    print(f"\033[1;31;48m{ascii_img.two_princess}")
+    slowType(f"Every since was young {name} always had power that\n"
+        "had kept secret... whatever drew came true!\n"
+        "Every day have played with Elizabeth, the best friend anyone\n"
+        f"could have, they would play on magical creations that came\n"
+        f"straight from {name}'s imagination\n"
+        f"But as them got older, they grew apart.\n"
+        f"{name} threw herself deeper into painting \n"
+        "while Elizabeth played sports and started hanging out\n"
+        "with other friend Jessica more often\n"
+        "However, the two still maintained a tradition of meeting\n"
+        "in front of school and walking home together until one day...\n"
+        f"{name} was waiting for long time outside for Elizabeth,\n" 
+        "but she still did not come.\n"
+        "\n"
         f"What should {name} do?\n")
-    slowTypeDif("1. Go home.\n 2. Go looking for Elizabeth.\n 3. Go back into the school again and ask for more homework.")
-    draw_pick = input("=> ")
+    slowType("\n1. Go home.\n2. Go looking for Elizabeth.\n3. Go back into the school again and ask for more homework.\n")
+    draw_pick = input("\n""=> ")
     if int(draw_pick) == 1:
-        slowType("\n"f"{name} then went home, was enrange thinking that Elizabeth let her down."
-        "And passed the afternoon in bed upset.")
+        slowType("\n"f"{name} then went home, was enrange thinking that Elizabeth\n"
+        "let her down. And passed the afternoon in bed upset.\n")
         at_school_day_one()
     elif int(draw_pick) == 2:
-        slowTypeDif("\n"f"So {name} went looking for Elizabeth and walked and walked until got in a strange street\n"
+        slowType("\n"f"So {name} went looking for Elizabeth and walked and walked,\n"
+        "until got in a strange street\n"
         "that never had been in before, suddenly ... she was lost!\n")
-        slowType(f"What now... {name} though")
-        street_pick = input("1. Yell for help?\n""2. Keep walking.\n")
+        slowType(f"What now... {name} though\n"
+        "\n1. Yell for help?\n2. Keep walking.\n")
+        street_pick = input("\n""=> ")
         if int(street_pick) == 1:
-            slowType(f"So {name} did, and a lady respond and help so could make it back home")
+            slowType(f"So {name} did, and a lady respond and help so could make it back home\n")
             at_school_next_day()
         elif int(street_pick) == 2:
-            slowType(f"So that was the last time someone knew of {name}, only thing that was left were the draws...")
+            slowType("\n"f"So that was the last time someone knew of {name},\n" 
+            "only thing that was left were the draws...\n\n")
+            print(ascii_img.end_banner)
+            time.sleep(1)
+            exit()
         else:
-            slowType("That's not a valid option. Try again...")
+            slowType("That's not a valid option. Try again...\n")
     elif int(draw_pick) == 3:
         slowType("\n"f"{name} went then into the school and dedicate her time to homework.\n"
             "Never again draw or talk to anybody else.")
@@ -202,6 +224,21 @@ def story_kitchen():
 def story_closet():
     print("closet")
 
+
+def clear():
+    """ Clears the screen for the next content to be display
+        taken from RickofManc/vv-pizzas
+    """
+    print("\033c")
+
+
+def exit_app():
+    """
+    Display the end banner, and exit the app after a second
+    """
+    slowTypeF(ascii_img.end_banner)
+    time.sleep(1)
+    sys.exit()
 #def no_valid_option():
 
 welcome()
