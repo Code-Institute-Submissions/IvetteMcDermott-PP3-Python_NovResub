@@ -1,9 +1,9 @@
 
-WELC_LINE = "\n This is spooky story time...hope you are ready to be scared.\n"
+WELC_LINE = "This is spooky story time...hope you are ready to be scared.\n"
 
 story_picked = ["draw", "to do your homework", "take a nap"]
 
-introduction = ["It was a hot spring night in Florida.", "had just got home from school, the house was a very old wooden one.\n", "It had been in the family for over 100 years. And it creaked and groaned as the winds blew.\n"]
+introduction = ["It was a hot spring night in Florida.", "had just got home from school, the house was a very old wooden one.", "It had been in the family for over 100 years. And it creaked and groaned as the winds blew.\n"]
 intro = introduction[0]
 intro1 = introduction[1]
 intro2 = introduction[2]
@@ -19,13 +19,6 @@ nap_first_p = ["School had been very busy that day, so ", " feel very tired and 
 
 
 """ DRAW  
-Sarah threw herself deeper into painting while Elizabeth played sports and started hanging out with other friend Jessica more often
-However, the two still maintained a tradition of meeting in front of school and walking home together until one day.
-Sarah waited outside for Elizabeth, and Elizabeth never came.
-And then it happened again the next day. After days and days of Elizabeth no showing up, Sarah confronted her at school
-Why won’t you walk home with me? she asked
-I walk home with Jessica now. It’s no big deal Sometimes things change. 
-Sarah cursed at Elizabeth and screamed hateful things heartbroken she ran home
 She grabbed an old drawing of two of them and tore it in half
 The next day at school when Sarah went to apologize to Elizabeth, Elizabeth didn’t recognize her.
 She simply looked at her with a blank stare. Later that day, she noticed Jessica whispering something in Elizabeth ear as though they were talking about her.

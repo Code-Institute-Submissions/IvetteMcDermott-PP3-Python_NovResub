@@ -1,9 +1,9 @@
-import ascii_img 
+import gspread
+from google.oauth2.service_account import Credentials
+import ascii_img
 import lines_and_stories
 import sys
 import time
-import gspread
-from google.oauth2.service_account import Credentials
 
 
 
@@ -65,7 +65,7 @@ def welcome():
     "where you see =>, so I can continue.\n")
 
 
-def introduction():
+def get_name():
     global name
     """ Collect the user"s name and validate it to no be empty """
     slowType("\n"
@@ -78,7 +78,7 @@ def introduction():
         age()
     else:
         slowType("You are not following the rules...\n")
-        introduction()
+        get_name()
 
 
 def age():
@@ -88,7 +88,7 @@ def age():
         Modified accorder to suggestions and guidance of my mentor Brian Macharia
     """
     global name
-    slowType(f"but first, tell me your age {name}...\n")
+    slowType(f"but first, tell me your age...\n")
     
     while True:
         age_input = input("=> ").strip()
@@ -132,17 +132,15 @@ def pick_story():
     slowType(f"{lines_and_stories.intro}\n" 
     f"{name} {lines_and_stories.intro1}\n"
     f"{lines_and_stories.intro2}\n")
-    slowType("\n"f"Tell me what do you think {name} will do?\n")
+    clear()
+    slowType(f"\033[1;31;48mTell me what do you think {name} will do now that is at home?\n")
     slowType("\n"
         " 1. Draw.\n 2. Do homework.\n 3. Take a nap.\n")
-    slowType("\n"
-        "Pick one (1 or 2 or 3)\n")
-    stor_pick = input("=> ")
+    stor_pick = input("\n""=> ")
     picked = ""
-    clear()
     if int(stor_pick) == 1:
         picked = lines_and_stories.story_picked[0]
-        print(f"\033[1;31;48m {ascii_img.doing_art}")
+        print(f"\033[1;31;48m{ascii_img.doing_art}")
         slowType(f"You were right, {name} headed to {picked}, so went to the studio.\n")
         story_draw()
     elif int(stor_pick) == 2:
@@ -165,28 +163,32 @@ def story_draw():
     global name
     draw_pick = ""
     street_pick = ""
-    print(f"\033[1;31;48m{ascii_img.two_princess}")
-    slowType(f"Every since was young {name} always had power that\n"
+    clear()
+    slowType(f"\033[1;31;48mEvery since was young {name} always had a power that\n"
         "had kept secret... whatever drew came true!\n"
         "Every day have played with Elizabeth, the best friend anyone\n"
         f"could have, they would play on magical creations that came\n"
-        f"straight from {name}'s imagination\n"
-        f"But as them got older, they grew apart.\n"
+        f"straight from {name}'s imagination, in castles, etc\n")
+    print(ascii_img.princess)
+    slowType(f"But as them got older, they grew apart.\n"
         f"{name} threw herself deeper into painting \n"
         "while Elizabeth played sports and started hanging out\n"
-        "with other friend Jessica more often\n"
-        "However, the two still maintained a tradition of meeting\n"
+        "with other friend Jessica more often\n")
+    print(ascii_img.basketball)
+    clear()
+    slowType("However, the two still maintained a tradition of meeting\n"
         "in front of school and walking home together until one day...\n"
         f"{name} was waiting for long time outside for Elizabeth,\n" 
         "but she still did not come.\n"
-        "\n"
-        f"What should {name} do?\n")
+        "\n")
+    clear()
+    slowType(f"What should {name} do?\n")
     slowType("\n1. Go home.\n2. Go looking for Elizabeth.\n3. Go back into the school again and ask for more homework.\n")
     draw_pick = input("\n""=> ")
     if int(draw_pick) == 1:
         slowType("\n"f"{name} then went home, was enrange thinking that Elizabeth\n"
         "let her down. And passed the afternoon in bed upset.\n")
-        at_school_day_one()
+        at_school_next_day()
     elif int(draw_pick) == 2:
         slowType("\n"f"So {name} went looking for Elizabeth and walked and walked,\n"
         "until got in a strange street\n"
@@ -208,13 +210,20 @@ def story_draw():
     elif int(draw_pick) == 3:
         slowType("\n"f"{name} went then into the school and dedicate her time to homework.\n"
             "Never again draw or talk to anybody else.")
+        clear()
+        exit_app()
     else:
         slowType("\n""You had not pick a valid option, try again...\n")
         pick_story()
 
 
 def at_school_next_day():
+    clear()
     print("at school next day")
+    slowType("And then it happened again the next day.\n After days and days of Elizabeth no showing up,\n Sarah confronted her at school"
+    f"\033[1;36;40mWhy won’t you walk home with me?""she asked")
+    slowType(f"\033[1;32;40mI walk home with Jessica now.""said Elizabeth\n"f"\033[1;32;40m It’s no big deal Sometimes things change.\n"
+    f"{name} cursed at Elizabeth and screamed hateful\n""things heartbroken she ran home\n")
 
 
 def story_kitchen():
@@ -226,8 +235,9 @@ def story_closet():
 
 
 def clear():
-    """ Clears the screen for the next content to be display
-        taken from RickofManc/vv-pizzas
+    """ 
+    Clears the screen for the next content to be display
+    taken from RickofManc/vv-pizzas
     """
     print("\033c")
 
@@ -239,10 +249,11 @@ def exit_app():
     slowTypeF(ascii_img.end_banner)
     time.sleep(1)
     sys.exit()
-#def no_valid_option():
+
 
 welcome()
-introduction()
+get_name()
+
 
 #users_record = SHEET.worksheet("Sheet1")
 #users_record.append_row(name)
