@@ -17,6 +17,7 @@ kitchen_first_p = ["To", " , they were the familiar sounds of a house full of lo
 
 nap_first_p = ["School had been very busy that day, so ", " feel very tired and decided to go for a nap", "when woke up dinner was ready, so joined the table and after it went direct to bed as still feeling tired"]
 
+hola = " yell at Elizabeth and screamed hateful\n""things heartbroken she ran home\n"
 
 """ DRAW  
 She grabbed an old drawing of two of them and tore it in half
