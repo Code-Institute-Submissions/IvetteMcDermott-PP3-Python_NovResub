@@ -66,18 +66,20 @@ def age():
     a message and ask for a valid one
     Modified accorder to suggestions and guidance of my mentor Brian Macharia
     """
+    global name
     slow_type("but first, tell me your age...\n")
     while True:
         age_input = input("=> ").strip()
+        age = int(age_input)
         if not age_input.isdigit():
             slow_type("You are not following the rules."
                       " You must enter a number.\n")
             continue
-        if int(age) > 99:
+        if age > 99:
             slow_type("You not following the rules."
                       "You must enter a number less than 100.\n")
             continue
-        if int(age) < 10:
+        if age < 10:
             slow_type("Oh you are too young yet, sorry"
                       " I may offer you in a next time a lullaby...\n")
             slow_type(ascii_img.BABY)
@@ -187,7 +189,7 @@ def story_draw():
         elif int(street_pick) == 2:
             slow_type("\nSo that was the last time someone knew of \n"
                       f"{name},only thing that was left were the draws...\n")
-            print(ascii_img.end_banner)
+            print(ascii_img.END_BANNER)
             time.sleep(1)
             exit()
         else:
