@@ -251,21 +251,21 @@ def at_school_next_day():
                   " late...\n")
         clear()
         slow_type(f"\033[1;31;48mShe knock the door and {name} open the door"
-                  " and let her in, said was going to get lemonade, so told"
-                  " Elizabeth\n"
-                  f"\033[1;36;48m You can go to my room while get it"
+                  " and let her in,""\n" 
+                  "said was going to get lemonade, so told Elizabeth\n"
+                  f"\033[1;36;48m You can go to my room while get it""\n"
                   f"\033[1;31;48mBut Elizabeth for some reason headed to "
-                  "the studio and just as sitting on the desk saw something" 
+                  "the studio and just as sitting on the desk saw something"
                   " that shocked!\n""\n"
                   "she couldn't believe it! Had to run to see Jessica now!!\n"
                   "So she did. When go to Jessica's home she even didn't stop"
                   " to say hello to her parents, she ran upstairs and "
-                  "there she was... Jessica...")
+                  "there she was... Jessica... Just like the draw in her hand...")
         clear()
-        slow_type("\033[1;31;48mJust like the draw in her hand..."
-                  "there was Jessica in front her eyes, laying in bed,"
+        slow_type("\033[1;31;48mThere was Jessica in front her eyes, laying in bed,"
                   " tears on her cheeks ...she had no mouth!""\n""\n")
         print(f"{ascii_img.GIRL}""\n")
+        clear()
         exit_app()   
     else:
         print("Option no valid, try again please")
