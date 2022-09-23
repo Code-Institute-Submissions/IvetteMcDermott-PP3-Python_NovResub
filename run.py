@@ -261,7 +261,7 @@ def at_school_next_day():
                   "So she did. When go to Jessica's home she even didn't stop"
                   " to say hello to her parents, she ran upstairs and "
                   "there she was... Jessica...")
-        clear
+        clear()
         slow_type("\033[1;31;48mJust like the draw in her hand..."
                   "there was Jessica in front her eyes, laying in bed,"
                   " tears on her cheeks ...she had no mouth!""\n""\n")
