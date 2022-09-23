@@ -3,21 +3,50 @@ WELC_LINE = "This is spooky story time...hope you are ready to be scared.\n"
 
 story_picked = ["draw", "to do your homework", "take a nap"]
 
-introduction = ["It was a hot spring night in Florida.", "had just got home from school, the house was a very old wooden one.", "It had been in the family for over 100 years. And it creaked and groaned as the winds blew.\n"]
+introduction = ["It was a hot spring night in Florida.", 
+                "had just got home from school, the house was a very old wooden one.",
+                "It had been in the family for over 100 years. And it creaked and groaned as the winds blew.\n"]
 intro = introduction[0]
 intro1 = introduction[1]
 intro2 = introduction[2]
 
-drawing_first_p = ["Every since was young", " always had power that had kept secret... whatever drew came true!", "Every day have played with Elizabeth, the best friend anyone could have, they would play on magical creations that came straight from their imagination"]
-drawing = introduction[0]
-intro1 = introduction[1]
-intro2 = introduction[2]
+drawing_first_p = ["Every since was young", 
+                   " always had power that had kept secret... whatever drew came true!",
+                   "Every day have played with Elizabeth, the best friend anyone could have, they would play on magical creations that came straight from their imagination"]
 
-kitchen_first_p = ["To", " , they were the familiar sounds of a house full of love, one never used to be silent.", " fondly remembered the grandmother cooking, bashing pots and pans in the kitchen.", "Granny would yell put loud when dinner was ready."]
+kitchen_first_p = ["To", " , they were the familiar sounds of a house full of love, one never used to be silent.",
+                   " fondly remembered the grandmother cooking, bashing pots and pans in the kitchen.",
+                   "Granny would yell put loud when dinner was ready."]
 
-nap_first_p = ["School had been very busy that day, so ", " feel very tired and decided to go for a nap", "when woke up dinner was ready, so joined the table and after it went direct to bed as still feeling tired"]
+nap_first_p = ["School had been very busy that day, so ",
+               " feel very tired and decided to go for a nap", 
+               "when woke up dinner was ready, so joined the table and after it went direct to bed as still feeling tired"]
 
-hola = " yell at Elizabeth and screamed hateful\n""things heartbroken she ran home\n"
+"""
+draw_story variables 
+"""
+ds_text_one = []
+
+ds_text_two = []
+
+ds_text_three = []
+
+ds_text_four = []
+
+ds_text_five = []
+
+ds_text_six = []
+
+ds_text_seven = []
+
+"""
+at_school_next_day variables
+"""
+nd_text_one =  []
+nd_text_two = []
+nd_text_three = []
+
+
 
 """ DRAW  
 She grabbed an old drawing of two of them and tore it in half
