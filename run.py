@@ -144,7 +144,7 @@ def pick_story():
     elif int(stor_pick) == 3:
         picked = lines_and_stories.story_picked[2]
         slow_type("\n"
-                  f"Picked right there, {name} headed to {picked},"
+                  f"You picked the right one there, {name} headed to {picked},"
                   " so went to the second floor.\n")
         story_nap()
     else:
@@ -284,32 +284,32 @@ def story_homework():
     """
     clear()
     slow_type("\033[1;31;48mBut the house was quiet after school now.\n"
-              "Noone was there.\n"
+              "No one was there.\n"
               f"So {name} settled in to began the homework "
-              "waiting for her mom to get back home.\n"
+              "waiting for their mom to get back home.\n"
               "Her dog sat beside her.\n"
-              f"{name} had just finished her first math problem when "
-              "she heard the door slam downstairs.\n"
+              f"{name} had just finished their first math problem when "
+              "they heard the door slam downstairs.\n"
               f"\n'Mom must be home early' {name} thought.\n"
               f"\n{name} called down to her, 'Mom?'\n"
-              f"\nDo you think was {name}'s mom? 'y' for yes or 'n' for no \n")
+              f"\nDo you think it was {name}'s mom? 'y' for yes or 'n' for no \n")
     answer_mom_arrived = input("=> ").strip()
     if answer_mom_arrived == "y":
         clear()
         slow_type("\n"
                   f"\033[1;31;48mYes! Mom was home, and as soon as {name}"
                   " end the homework,\n"
-                  "they had dinner and saw a movie in family, together"
+                  "they had dinner and saw a family movie, together"
                   " with dad.")
         print(ascii_img.family)
         exit_app()
     elif answer_mom_arrived == "n":
         clear()
         slow_type("\n"
-                  "\033[1;31;48mRight, noone respond...\n"
+                  "\033[1;31;48mRight, no one respond...\n"
                   "Probably just the wind, thought.\n"
-                  "\nAnd continue with the homework. An hour past, almost "
-                  "finished the first assignment \nwhen faintly heard the "
+                  "\nAnd continued with the homework. An hour passed, almost "
+                  "finished the first assignment \nwhen they faintly heard the "
                   "sounds of pots and pans clanging downstairs.\n"
                   "But ...\n"
                   f"{name} hadn't heard mom come in the door.\n"
@@ -317,8 +317,8 @@ def story_homework():
                   f"Disembodied voice: {name}\n"
                   "A voice called from downstairs\n")
         clear()
-        slow_type(f"\033[1;31;48mOne second {name} distractely responded,"
-                  " finishing up a final math problem\n"
+        slow_type(f"\033[1;31;48mOne second {name} distractadly responded,"
+                  "while finishing up a final math problem\n"
                   "\n"
                   f"Disembodied voice: {name}\n"
                   "The voice called again\n"
@@ -329,37 +329,37 @@ def story_homework():
         clear()
         if answer_go_downstairs == "n":
             slow_type("\n"
-                      f"\033[1;31;48m{name} realise that the voice "
+                      f"\033[1;31;48m{name} realised that the voice "
                       "did not sound exactly like mom!\n"
-                      "So called: Moooom?\n"
+                      "So they called: Moooom?\n"
                       "No answer... \n"
-                      f"{name} ran lock the door and hide under the bed...\n"
-                      "Hoping that soon enough someone arrive.")
+                      f"{name} ran and locked the door and hid under the bed...\n"
+                      "Hoping that soon enough someone would arrive.")
             print(ascii_img.bed)
             exit_app()
         elif answer_go_downstairs == "y":
             slow_type("\n"
-                      f"\033[1;31;48m{name} closed the books and walk downstairs, "
-                      "calling her dog to follow but he wouldn't budge.\n"
-                      "She shrugged it off and walked downstairs and "
-                      "into the kitchen.\n"
-                      "No one was there but what she saw sent a chill "
-                      "down her spine.\n"
+                      f"\033[1;31;48m{name} closed the books and walked "
+                      "downstairs, calling their dog to follow but he "
+                      f"wouldn't budge.\n {name} shrugged it off and"
+                      " walked  downstairs and into the kitchen.\n"
+                      "No one was there but what they saw sent a chill "
+                      "down their spine.\n"
                       "Every pot and pan in the house had been stacked "
                       "neatly in the middle of the room.\n"
                       "Cabinets lay open and empty."
-                      "*She heard the sound of a creaking door*")
+                      "*They heard the sound of a creaking door*")
             clear()
-            slow_type("\033[1;31;48mThe side door flew open beside her.\n"
+            slow_type("\033[1;31;48mThe side door flew open beside them.\n"
                       f"In the doorway stood {name}'s mom, groceries in hand."
-                      "But if she was only just getting home, "
-                      "who laid out the pots and pans?  Mom looked around "
+                      "But as if she was only just getting home, "
+                      "Who laid out the pots and pans?  Mom looked around "
                       "at the scattered pots and pans, confused."
-                      "'You helping me cook tonight, Chrissie?'"
-                      f"'I didn't do this' replied {name}, as she and her"
+                      f"'Are you helping me cook tonight, {name}?'"
+                      f"'I didn't do this' replied {name}, as they and their"
                       " mom looked around the kitchen…"
-                      "'Then who did?' asked her mom"
-                      f"Disembodied voice: {name} dinner is ready")
+                      "'Then who did?' asked mom\n"
+                      f"Disembodied voice: {name}... dinner is reaaaady")
             clear()
             print(f"\033[1;31;48m{ascii_img.ghost}")
             exit_app()
