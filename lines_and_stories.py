@@ -68,24 +68,10 @@ She went to school next day, a stranger to her best friend. Ad she never drew ag
 
 """
 
-""" KITCHEN But the house was quiet after school now. Chrissie settled in her room and began her homework waiting for her mom to get back home. Her dog sat beside her. Chrissie had just finished her first math problem when she heard the door slam downstairs. Mom must be home early. Chrissie called down to her, “mom”. There was no response. Probably just the wind, she thought. She shrugged it off and continues her homework. An hour past she almost finished her first assignment when she faintly heard the sounds of pots and pans clanging downstairs. She hadn’t heard mom come in the door.
-Disembodied voice: chrissyyyy
-A voice called from downstairs
-One second Chrissie responded, finishing up her final math problem
-Disembodied voice: chrissyyyy
-The voice called again
-Chrissie closed the books and walk downstairs, calling her dog to follow but he wouldn’t budge. She shrugged it off and walked downstairs and into the kitchen
-No one was there but what she saw sent a chill down her spine. Every pot and pan in the house had been stacked neatly in the middle of the room. Cabinets lay open and empty.
-[She heard the sound of a creaking door]
-The side door flew open beside her. In the doorway stood Chrissie’s mom, groceries in hand. But if she was only just getting home, who laid out the pots and pans?  Mom looked around at the scattered pots and pans, confused. “You helping me cook tonight, Chrissie?”
-“I didn’t do this” replied Chrissie, as she and her mom looked around the kitchen…
-“Then who did?” asked her mom 
-Disembodied voice: Chrissyyyyy dinner is ready
+""" 
  """
 
-""" NAP  It was the death of night. The house was quiet and name sleep down the hall from her parents. Suddenly show awoke to the sound of something in her closet.
-She mustered up all her courage and slinked out of her bed and down the hall, breaking into a run to her parent’s rooms as quickly as she could.  Her father followed her to investigate the noise, the 2 of them slowly open the closet door but nothing was there
-Stacy sleep 
+""" NAP   
 
 """
 second_part = []

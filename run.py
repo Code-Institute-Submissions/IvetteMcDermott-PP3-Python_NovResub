@@ -89,9 +89,9 @@ def age():
                       "ok, you are old enough but are you brave enough?\n")
             confirm_continue()
 
-            
+
 def confirm_continue():
-    """ 
+    """
     Confirm if user wants to start the story or decide to leave
     """
     slow_type("\n"
@@ -111,7 +111,7 @@ def confirm_continue():
     else:
         slow_type("Option no valid, please try again")
         confirm_continue()
-                
+
 
 def pick_story():
     """ Allows the user to pick the main direction of the story,
@@ -175,7 +175,7 @@ def story_draw():
               "However, the two still maintained a tradition of meeting\n"
               "in front of school and walking home together until"
               " one day...\n")
-    
+
     clear()
     slow_type(f"\033[1;31;48m{name} was waiting for long time outside for"
               " Elizabeth,\n""but she still did not come.\n"
@@ -228,10 +228,10 @@ def at_school_next_day():
     clear()
     slow_type(f"\033[1;31;48mAnd then it happened again the next day.\n"
               "After days and days of Elizabeth no showing up,\n"
-              f"{name} confronted her at school\n""\n")
-    slow_type("\033[1;36;48mWhy won't you walk home with me?")
-    slow_type("\033[1;31;48m she asked\n""\n")
-    slow_type(f"\033[1;32;48mI walk home with Jessica now. "
+              f"{name} confronted her at school\n""\n"
+              f"\033[1;36;48mWhy won't you walk home with me?"
+              f"\033[1;31;48m she asked\n""\n"
+              f"\033[1;32;48mI walk home with Jessica now. "
               f"\033[1;31;48msaid Elizabeth\n"
               f"\033[1;32;48mIt's no big deal sometimes things change.\n""\n"
               f"\033[1;31;48m{name} yell at Elizabeth and screamed hateful\n"
@@ -251,22 +251,24 @@ def at_school_next_day():
                   " late...\n")
         clear()
         slow_type(f"\033[1;31;48mShe knock the door and {name} open the door"
-                  " and let her in,""\n" 
+                  " and let her in,""\n"
                   "said was going to get lemonade, so told Elizabeth\n"
                   f"\033[1;36;48m You can go to my room while get it""\n"
                   f"\033[1;31;48mBut Elizabeth for some reason headed to "
-                  "the studio and just as sitting on the desk saw something"
-                  " that shocked!\n""\n"
+                  "the studio" "\n"
+                  "and just as sitting on the desk saw"
+                  " something that shocked her!\n""\n"
                   "she couldn't believe it! Had to run to see Jessica now!!\n"
-                  "So she did. When go to Jessica's home she even didn't stop"
-                  " to say hello to her parents, she ran upstairs and "
-                  "there she was... Jessica... Just like the draw in her hand...")
+                  "So she did. When go to Jessica's home she even didn't \n"
+                  "stop to say hello to her parents, she ran upstairs and \n"
+                  "there she was...Jessica...Just like the draw"
+                  " in her hand...")
         clear()
-        slow_type("\033[1;31;48mThere was Jessica in front her eyes, laying in bed,"
-                  " tears on her cheeks ...she had no mouth!""\n""\n")
+        slow_type("\033[1;31;48mThere was Jessica in front her eyes, laying"
+                  " in bed, tears on her cheeks ...she had no mouth!""\n""\n")
         print(f"{ascii_img.GIRL}""\n")
         clear()
-        exit_app()   
+        exit_app()
     else:
         print("Option no valid, try again please")
         at_school_next_day()
@@ -276,14 +278,99 @@ def story_kitchen():
     """
     Starts the kitchen story option
     """
-    print("kitchen")
+    clear()
+    slow_type("But the house was quiet after school now. Noone was there."
+              f"So {name} settled in to began the homework"
+              "waiting for her mom to get back home. Her dog sat beside her.\n"
+              f"{name} had just finished her first math problem when "
+              "she heard the door slam downstairs. Mom must be home early.\n"
+              f"{name} called down to her, 'Mom?'\n")
+    slow_type(f"Do you think was {name}'s mom?\n"
+              "1. 'y' for yes\n"
+              "2. 'n' for no\n")
+    answer_mom_arrived = input("=> ").strip()
+    if answer_mom_arrived == "y":
+        slow_type(f"Yes! Mom was home, and as soon as {name} end the homework,"
+                  "they had dinner and saw a movie in family, together"
+                  " with dad.")
+        exit_app()
+    elif answer_mom_arrived == "n":
+        slow_type("Right, noone respond...\n"
+                  "Probably just the wind, thought.\n"
+                  "And continues the homework. An hour past, almost finished "
+                  "the first assignment when faintly heard the sounds \n"
+                  "of pots and pans clanging downstairs.\n"
+                  "But ...\n"
+                  "She hadn't heard mom come in the door."
+                  f"Disembodied voice: {name}"
+                  "A voice called from downstairs")
+        clear()
+        slow_type(f"One second {name} distractely responded, finishing up "
+                  "a final math problem\n"
+                  f"Disembodied voice: {name}\n"
+                  "The voice called again\n"
+                  f"Will {name} go downstairs or notice something was"
+                  " not right? 'y' for yes or 'n' for no")
+        answer_go_downstairs = input("=> ").strip()
+        if answer_go_downstairs == "n":
+            slow_type(f"{name} realise that the voice was not mom!\n"
+                      "So called: Moooom?\n"
+                      "No answer... "
+                      f"{name} ran lock the door and hide under the bed..."
+                      "Hoping that soon enough someone arrive.")
+            exit_app()
+        elif answer_go_downstairs == "y":
+            slow_type(f"{name} closed the books and walk downstairs, "
+                      "calling her dog to follow but he wouldn't budge.\n"
+                      "She shrugged it off and walked downstairs and "
+                      "into the kitchen.\n"
+                      "No one was there but what she saw sent a chill "
+                      "down her spine.\n"
+                      "Every pot and pan in the house had been stacked "
+                      "neatly in the middle of the room.\n"
+                      "Cabinets lay open and empty."
+                      "*She heard the sound of a creaking door*")
+            clear()
+            slow_type("The side door flew open beside her.\n"
+                      f"In the doorway stood {name}'s mom, groceries in hand."
+                      "But if she was only just getting home, "
+                      "who laid out the pots and pans?  Mom looked around "
+                      "at the scattered pots and pans, confused."
+                      "'You helping me cook tonight, Chrissie?'"
+                      f"'I didn't do this' replied {name}, as she and her"
+                      " mom looked around the kitchen…" 
+                      "'Then who did?' asked her mom"
+                      f"Disembodied voice: {name} dinner is ready")
+        else:
+            print("Option no valid, try again please")
+            story_kitchen()
+    else:
+        print("Option no valid, try again please")
+        story_kitchen()
+
+
+"""
+        ("kitchen"
+          "KITCHEN  
+          
+)
+"""
 
 
 def story_closet():
     """
     Open the flow to the closet story
     """
-    print("closet")
+    print("It was the death of night. The house was quiet"
+          f" and {name} sleep down the hall from her parents. "
+          "Suddenly show awoke to the sound of something in her closet."
+          f"{name} mustered up all her courage and slinked out of her bed "
+          "and down the hall, breaking into a run to her parent's rooms "
+          "as quickly as she could. Her father followed her to investigate "
+          "the noise, the 2 of them slowly open the closet door but nothing "
+          f"was there, father put again {name} to sleep"
+          "next night the same, and the following"
+          )
 
 
 def clear():
