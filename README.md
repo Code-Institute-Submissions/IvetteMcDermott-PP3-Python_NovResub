@@ -1,33 +1,77 @@
-[HEROKU Deployed](https://pp3-python.herokuapp.com/)
+# SPOOKY STORIES
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+[LIVE SITE](https://pp3-python.herokuapp.com/)
 
-Welcome IvetteMcDermott,
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+This site was inspired by interactive e-books, the spooky theme is down to the Halloween season. Developed as a type of campfire spooky story, the target user are children over 9 years old. The site in certain stages of the story present options to the user to make decisions and lead the story to one of the alternative endings.
 
-## Reminders
+The goal of this website is promoting reading and making decisions through an interactive adventure in an engaging way.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## UX
 
-## Creating the Heroku app
+### Ideal User 
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+English speaking children over 9 years old that enjoy of spooky stories.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### First Time User Goals
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+As first time user, I want to find easy to undestand the purpose of the site.
+As first time user, I want to find easy to undestand the way to interact with the site.
+As first time user, I want to understand that there are multiples outcomings that could open if return.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Returning User Goals
 
-Connect your GitHub repository and deploy as normal.
+As returning user, I want to find twists in the story.
+As returning user, I want to see the differents endings of the story.
 
-## Constraints
+### Flowchart
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
 
------
-Happy coding!
+## Features
+
+The terminal displayed is the default from the CI template. Only modification had been the colors in the text.
+
+### Features to implement in future
+
+More options and twists could be added to it, to increase the extend the adventure. To encourage the users to return.
+
+## Technologies Used
+
+Python
+GitHub
+GitPod
+Heroku
+LucidCharts 
+
+## Testing
+
+### Validation
+Pep8
+Linting in terminal
+
+### Testing
+Manual testing (validation for no valid answers, display of corrects tests after the selected option)
+
+
+## Deployment
+need to describe step by step the process
+from creation of an account heroku, github, a clonation
+
+https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+
+https://github.com/IvetteMcDermott/PP3-Python 
+
+https://signup.heroku.com/
+
+
+
+## Credits
+
+# Content
+
+Text
+
+Arts
+
+Code
+

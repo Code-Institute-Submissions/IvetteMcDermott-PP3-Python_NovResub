@@ -389,7 +389,7 @@ def clear():
     Clears the screen for the next content to be display
     taken from RickofManc/vv-pizzas
     """
-    time.sleep(1)
+    time.sleep(3)
     print("\033c")
 
 

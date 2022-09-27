@@ -1,7 +1,7 @@
 
 WELC_LINE = "This is spooky story time...hope you are ready to be scared.\n"
 
-story_picked = ["draw", "to do your homework", "take a nap"]
+story_picked = ["draw", "do your homework", "take a nap"]
 
 introduction = ["It was a hot spring night in Florida.", 
                 "had just got home from school, the house was a very old wooden one.",
