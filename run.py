@@ -82,7 +82,8 @@ def age():
             slow_type("Oh you are too young yet, sorry"
                       " I may offer you a lullaby next time...\n")
             print(ascii_img.BABY)
-            slow_type("Bye for now...")
+            slow_type("\n"
+                      "Bye for now...")
             sys.exit()
         else:
             slow_type("\n"
@@ -102,6 +103,7 @@ def confirm_continue():
                   "So you chickened out?\n"
                   "I did not expect that from you.\n")
         print(ascii_img.CHICKEN)
+        clear()
         exit_app()
     elif answer == 'y':
         slow_type("\n"
@@ -317,13 +319,13 @@ def story_homework():
                   "But ...\n"
                   f"{name} hadn't heard mom come in the door.\n"
                   "\n"
-                  f"Disembodied voice: {name}\n"
+                  f"Disembodied voice: {name}...\n"
                   "A voice called from downstairs\n")
         clear()
         slow_type(f"\033[1;31;48mOne second {name} distractadly responded,"
                   "while finishing up a final math problem\n"
                   "\n"
-                  f"Disembodied voice: {name}\n"
+                  f"Disembodied voice: {name}...\n"
                   "The voice called again\n"
                   "\n"
                   f"Will {name} go downstairs or notice something was"
