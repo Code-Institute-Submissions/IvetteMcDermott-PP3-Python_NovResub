@@ -81,7 +81,7 @@ def age():
         if (int(age_input)) < 10:
             slow_type("Oh you are too young yet, sorry"
                       " I may offer you a lullaby next time...\n")
-            slow_type(ascii_img.BABY)
+            print(ascii_img.BABY)
             slow_type("Bye for now...")
             sys.exit()
         else:
@@ -134,6 +134,7 @@ def pick_story():
         slow_type("\n"
                   f"You were right, {name} headed to {picked},"
                   " so they went to the studio.\n")
+        time.sleep(3)
         story_draw()
     elif int(stor_pick) == 2:
         picked = lines_and_stories.story_picked[1]
@@ -168,7 +169,6 @@ def story_draw():
     print(ascii_img.PRINCESS)
     slow_type("\n""\033[1;31;48mBut as they got older, they grew apart.\n"
               f"{name} threw themself deeper into painting.\n")
-    time.sleep(1)
     clear()
     slow_type("\n \033[1;31;48mWhile Elizabeth played sports and started"
               " hanging out\n"
@@ -273,7 +273,7 @@ def at_school_next_day():
         clear()
         exit_app()
     else:
-        print("That's not a valid option. Try again...\n")
+        slow_type("That's not a valid option. Try again...\n")
         at_school_next_day()
 
 
@@ -292,7 +292,8 @@ def story_homework():
               "they heard the door slam downstairs.\n"
               f"\n'Mom must be home early' {name} thought.\n"
               f"\n{name} called down to her, 'Mom?'\n"
-              f"\nDo you think it was {name}'s mom? 'y' for yes or 'n' for no \n")
+              f"\nDo you think it was {name}'s mom? "
+              "'y' for yes or 'n' for no \n")
     answer_mom_arrived = input("=> ").strip()
     if answer_mom_arrived == "y":
         clear()
@@ -309,8 +310,8 @@ def story_homework():
                   "\033[1;31;48mRight, no one respond...\n"
                   "Probably just the wind, thought.\n"
                   "\nAnd continued with the homework. An hour passed, almost "
-                  "finished the first assignment \nwhen they faintly heard the "
-                  "sounds of pots and pans clanging downstairs.\n"
+                  "finished the first \nassignment when they faintly heard "
+                  "the sounds of pots and pans clanging downstairs.\n"
                   "But ...\n"
                   f"{name} hadn't heard mom come in the door.\n"
                   "\n"
@@ -333,9 +334,11 @@ def story_homework():
                       "did not sound exactly like mom!\n"
                       "So they called: Moooom?\n"
                       "No answer... \n"
-                      f"{name} ran and locked the door and hid under the bed...\n"
+                      f"{name} ran and locked the door and hid "
+                      "under the bed...\n"
                       "Hoping that soon enough someone would arrive.")
             print(ascii_img.bed)
+            clear()
             exit_app()
         elif answer_go_downstairs == "y":
             slow_type("\n"
@@ -362,12 +365,13 @@ def story_homework():
                       f"Disembodied voice: {name}... dinner is reaaaady")
             clear()
             print(f"\033[1;31;48m{ascii_img.ghost}")
+            clear()
             exit_app()
         else:
-            print("\nThat's not a valid option. Try again...\n")
+            slow_type("\nThat's not a valid option. Try again...\n")
             story_homework()
     else:
-        print("\nThat's not a valid option. Try again...\n")
+        slow_type("\nThat's not a valid option. Try again...\n")
         story_homework()
 
 
