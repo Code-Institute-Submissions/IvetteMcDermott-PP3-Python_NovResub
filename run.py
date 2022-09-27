@@ -165,7 +165,8 @@ def story_draw():
               "had kept secret... whatever drew came true!\n"
               f"Every day {name} had played with Elizabeth, the best friend\n"
               "anyone could have, they would play on magical creations that\n"
-              f"came straight from {name}'s imagination.")
+              f"came straight from {name}'s imagination.\n"
+              "\n")
     print(ascii_img.PRINCESS)
     slow_type("\n""\033[1;31;48mBut as they got older, they grew apart.\n"
               f"{name} threw themself deeper into painting.\n")
@@ -288,8 +289,8 @@ def story_homework():
               f"So {name} settled in to began the homework "
               "waiting for their mom to get back home.\n"
               "Her dog sat beside her.\n"
-              f"{name} had just finished their first math problem when "
-              "they heard the door slam downstairs.\n"
+              f"{name} had just finished their first math problem \n"
+              "when they heard the door slam downstairs.\n"
               f"\n'Mom must be home early' {name} thought.\n"
               f"\n{name} called down to her, 'Mom?'\n"
               f"\nDo you think it was {name}'s mom? "
@@ -303,6 +304,7 @@ def story_homework():
                   "they had dinner and saw a family movie, together"
                   " with dad.")
         print(ascii_img.family)
+        clear()
         exit_app()
     elif answer_mom_arrived == "n":
         clear()
@@ -310,7 +312,7 @@ def story_homework():
                   "\033[1;31;48mRight, no one respond...\n"
                   "Probably just the wind, thought.\n"
                   "\nAnd continued with the homework. An hour passed, almost "
-                  "finished the first \nassignment when they faintly heard "
+                  "finished the first \n assignment when they faintly heard "
                   "the sounds of pots and pans clanging downstairs.\n"
                   "But ...\n"
                   f"{name} hadn't heard mom come in the door.\n"
@@ -385,6 +387,7 @@ def story_nap():
               "The rest of the house was quiet, but that noise...")
     clear()
     print(f"\033[1;31;48m{ascii_img.monster}")
+    clear()
     exit_app()
 
 
