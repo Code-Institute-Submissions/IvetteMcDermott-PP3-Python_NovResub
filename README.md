@@ -26,6 +26,7 @@ As a returning user, I want to see the different endings of the story.
 
 ### Flowchart
 
+![]
 
 ## Features
 

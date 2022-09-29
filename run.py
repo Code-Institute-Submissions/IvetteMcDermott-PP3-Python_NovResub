@@ -1,21 +1,9 @@
 """ App file """
 import sys
 import time
-import gspread
-from google.oauth2.service_account import Credentials
 import ascii_img
 import lines_and_stories
 
-
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
-CREDS = Credentials.from_service_account_file("creds.json")
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open("pp3-python")
 
 name = ""
 
@@ -45,7 +33,6 @@ def get_name():
     """
     Collect the user's name and validate it to no be empty
     """
-    global name
     slow_type("\n"
               "Now tell me your name ...\n")
     name = input("=> ").strip()
@@ -66,7 +53,6 @@ def age():
     a message and ask for a valid one
     Modified accorder to suggestions and guidance of my mentor Brian Macharia
     """
-    global name
     slow_type("but first, tell me your age...\n")
     while True:
         age_input = input("=> ").strip()
@@ -282,7 +268,7 @@ def at_school_next_day():
 
 def story_homework():
     """
-    Display the content for homework story, 
+    Display the content for homework story,
     and the follow options of it
     """
     clear()
