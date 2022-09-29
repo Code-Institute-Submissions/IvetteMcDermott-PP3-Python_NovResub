@@ -5,7 +5,7 @@ import ascii_img
 import lines_and_stories
 
 
-name = ""
+name = []
 
 
 def slow_type(data):
@@ -35,11 +35,13 @@ def get_name():
     """
     slow_type("\n"
               "Now tell me your name ...\n")
-    name = input("=> ").strip()
-    if name != "":
+    user = input("=> ").strip()
+    if user != "":
+        # global name
+        name.append(user)
         time.sleep(1)
         slow_type("\n"
-                  f"{name}, that name, it reminds me of a story...\n")
+                  f"{name[0]}, that name, it reminds me of a story...\n")
         age()
     else:
         slow_type("You are not following the rules...\n")
@@ -53,6 +55,7 @@ def age():
     a message and ask for a valid one
     Modified accorder to suggestions and guidance of my mentor Brian Macharia
     """
+
     slow_type("but first, tell me your age...\n")
     while True:
         age_input = input("=> ").strip()
@@ -61,7 +64,8 @@ def age():
                       " You must enter a number.\n")
             continue
         if (int(age_input)) > 99:
-            slow_type("You not following the rules."
+            slow_type("\n"
+                      "You not following the rules."
                       "You must enter a number less than 100.\n")
             continue
         if (int(age_input)) < 10:
@@ -107,10 +111,10 @@ def pick_story():
     """
     print(f"\033[1;31;48m {ascii_img.HOUSE}\n")
     slow_type(f"{lines_and_stories.introduction[0]}\n"
-              f"{name} {lines_and_stories.introduction[1]}\n"
+              f"{name[0]}, {lines_and_stories.introduction[1]}\n"
               f"{lines_and_stories.introduction[2]}\n")
     clear()
-    slow_type(f"\033[1;31;48mTell me what do you think {name} will do"
+    slow_type(f"\033[1;31;48mTell me what do you think {name[0]} will do"
               " now that they are at home?\n")
     slow_type("\n"
               " 1. Draw.\n 2. Do homework.\n 3. Take a nap.\n""\n")
@@ -120,21 +124,21 @@ def pick_story():
         picked = lines_and_stories.story_picked[0]
         print(f"\033[1;31;48m{ascii_img.DOING_ART}")
         slow_type("\n"
-                  f"You were right, {name} headed to {picked},"
+                  f"You were right, {name[0]} headed to {picked},"
                   " so they went to the studio.\n")
         time.sleep(3)
         story_draw()
     elif int(stor_pick) == 2:
         picked = lines_and_stories.story_picked[1]
         slow_type("\n"
-                  f"Yes, {name} headed to {picked}, so they went to "
+                  f"Yes, {name[0]} headed to {picked}, so they went to "
                   "work at their desk.\n")
         story_homework()
     elif int(stor_pick) == 3:
         picked = lines_and_stories.story_picked[2]
         slow_type("\n"
-                  f"You picked the right one there, {name} headed to {picked},"
-                  " so went to the second floor.\n")
+                  f"You picked the right one there, {name[0]} headed to"
+                  f" {picked}, so went to the second floor.\n")
         story_nap()
     else:
         slow_type("That's not a valid option. Try again...\n")
@@ -148,16 +152,16 @@ def story_draw():
     draw_pick = ""
     street_pick = ""
     clear()
-    slow_type(f"\033[1;31;48mEvery since was young {name} "
+    slow_type(f"\033[1;31;48mEvery since was young {name[0]} "
               "always had a power that\n"
               "had kept secret... whatever drew came true!\n"
-              f"Every day {name} had played with Elizabeth, the best friend\n"
-              "anyone could have, they would play on magical creations that\n"
-              f"came straight from {name}'s imagination.\n"
+              f"Every day {name[0]} had played with Elizabeth, the best friend"
+              "\nanyone could have, they would play on magical creations that"
+              f"came straight from {name[0]}'s imagination.\n"
               "\n")
     print(ascii_img.PRINCESS)
     slow_type("\n""\033[1;31;48mBut as they got older, they grew apart.\n"
-              f"{name} threw themself deeper into painting.\n")
+              f"{name[0]} threw themself deeper into painting.\n")
     clear()
     slow_type("\n \033[1;31;48mWhile Elizabeth played sports and started"
               " hanging out\n"
@@ -168,40 +172,40 @@ def story_draw():
               "in front of school and walking home together until"
               " one day...\n")
     clear()
-    slow_type(f"\033[1;31;48m{name} was waiting for long time outside for"
+    slow_type(f"\033[1;31;48m{name[0]} was waiting for long time outside for"
               " Elizabeth,\n""but she still did not come.\n"
               "\n")
     slow_type(f"\033[1;35;48mWhat should I do?"
-              f" \033[1;31;48mThough {name}\n")
+              f" \033[1;31;48mThough {name[0]}\n")
     slow_type("\n1. Go home.\n2. Go looking for Elizabeth.\n3. Go back into"
               " the school again and ask for more homework.\n""\n")
     draw_pick = input("=> ")
     if int(draw_pick) == 1:
-        slow_type("\n"f"{name} then went home, and was enranged thinking that"
-                  " Elizabeth\n"
+        slow_type("\n"f"{name[0]} then went home, and was enranged thinking "
+                  "that Elizabeth\n"
                   "forgot about it. So passed the afternoon in bed upset.\n")
         at_school_next_day()
     elif int(draw_pick) == 2:
-        slow_type("\n"f"So {name} went looking for Elizabeth, and walked\n"
+        slow_type("\n"f"So {name[0]} went looking for Elizabeth, and walked\n"
                   " and walked... until they got into a strange street\n"
                   "that they had never been in before, suddenly ..."
-                  f" {name} was lost!\n")
-        slow_type(f"What now... {name} though\n"
+                  f" {name[0]} was lost!\n")
+        slow_type(f"What now... {name[0]} though\n"
                   "\n1. Yell for help?\n2. Keep walking.\n""\n")
         street_pick = input("=> ")
         if int(street_pick) == 1:
-            slow_type(f"So {name} did, and a lady responded and helped"
+            slow_type(f"So {name[0]} did, and a lady responded and helped"
                       " so they could make it back home\n")
             at_school_next_day()
         elif int(street_pick) == 2:
             slow_type("\nSo that was the last time someone heard of \n"
-                      f"{name}, the only things that were left "
+                      f"{name[0]}, the only things that were left "
                       "were the drawings...\n")
             exit_app()
         else:
             slow_type("That's not a valid option. Try again...\n")
     elif int(draw_pick) == 3:
-        slow_type("\n"f"\033[1;31;48m{name} went into the school and"
+        slow_type("\n"f"\033[1;31;48m{name[0]} went into the school and"
                   " dedicate their time to homework.\n"
                   "Never again drew or spoke to anybody else.""\n")
         exit_app()
@@ -217,18 +221,18 @@ def at_school_next_day():
     clear()
     slow_type(f"\033[1;31;48mAnd then it happened again the next day.\n"
               "After days and days of Elizabeth not showing up,\n"
-              f"{name} confronted her at school\n""\n"
+              f"{name[0]} confronted her at school\n""\n"
               f"\033[1;36;48mWhy won't you walk home with me?"
               f"\033[1;31;48m they asked\n""\n"
               f"\033[1;32;48mI walk home with Jessica now. "
               f"\033[1;31;48msaid Elizabeth\n"
               f"\033[1;32;48mIt's no big deal sometimes things change.\n""\n"
-              f"\033[1;31;48m{name} yelled at Elizabeth and screamed hateful\n"
-              "things and heartbroken, ran home\n")
+              f"\033[1;31;48m{name[0]} yelled at Elizabeth and screamed \n"
+              "hateful things and heartbroken, ran home\n")
     clear()
     slow_type("\033[1;31;48mAfter thinking about it a while, Elizabeth"
               " felt bad for abandoning her friend,"
-              " so she decided to go to {name}'s house\n"
+              f" so she decided to go to {name[0]}'s house\n"
               "\n""What do you think will happen?\n""\n"
               "1. Make peace.\n 2. It was too late.\n""\n")
     next_day_selection = input("=> ").strip()
@@ -237,10 +241,10 @@ def at_school_next_day():
                   " understading their different interests.")
         exit_app()
     elif next_day_selection == "2":
-        slow_type(f"Elizabeth walked to {name}'s house ... but it was too"
+        slow_type(f"Elizabeth walked to {name[0]}'s house ... but it was too"
                   " late...\n")
         clear()
-        slow_type(f"\033[1;31;48mShe knocked on the door and {name} opened"
+        slow_type(f"\033[1;31;48mShe knocked on the door and {name[0]} opened"
                   " and let her in,""\n"
                   "said was going to get lemonade, so told Elizabeth\n"
                   "\033[1;36;48m You can go to my room while I get it""\n"
@@ -274,20 +278,20 @@ def story_homework():
     clear()
     slow_type("\033[1;31;48mBut the house was quiet after school now.\n"
               "No one was there.\n"
-              f"So {name} settled in to began the homework "
+              f"So {name[0]} settled in to began the homework "
               "waiting for their mom to get back home.\n"
               "Her dog sat beside her.\n"
-              f"{name} had just finished their first math problem \n"
+              f"{name[0]} had just finished their first math problem \n"
               "when they heard the door slam downstairs.\n"
-              f"\n'Mom must be home early' {name} thought.\n"
-              f"\n{name} called down to her, 'Mom?'\n"
-              f"\nDo you think it was {name}'s mom? "
+              f"\n'Mom must be home early' {name[0]} thought.\n"
+              f"\n{name[0]} called down to her, 'Mom?'\n"
+              f"\nDo you think it was {name[0]}'s mom? "
               "'y' for yes or 'n' for no \n")
     answer_mom_arrived = input("=> ").strip()
     if answer_mom_arrived == "y":
         clear()
         slow_type("\n"
-                  f"\033[1;31;48mYes! Mom was home, and as soon as {name}"
+                  f"\033[1;31;48mYes! Mom was home, and as soon as {name[0]}"
                   " end the homework,\n"
                   "they had dinner and saw a family movie, together"
                   " with dad.")
@@ -303,28 +307,28 @@ def story_homework():
                   "finished the first \n assignment when they faintly heard "
                   "the sounds of pots and pans clanging downstairs.\n"
                   "But ...\n"
-                  f"{name} hadn't heard mom come in the door.\n"
+                  f"{name[0]} hadn't heard mom come in the door.\n"
                   "\n"
-                  f"Disembodied voice: {name}...\n"
+                  f"Disembodied voice: {name[0]}...\n"
                   "A voice called from downstairs\n")
         clear()
-        slow_type(f"\033[1;31;48mOne second {name} distractadly responded,"
+        slow_type(f"\033[1;31;48mOne second {name[0]} distractadly responded,"
                   "while finishing up a final math problem\n"
                   "\n"
-                  f"Disembodied voice: {name}...\n"
+                  f"Disembodied voice: {name[0]}...\n"
                   "The voice called again\n"
                   "\n"
-                  f"Will {name} go downstairs or notice something was"
-                  " not right? 'y' for yes or 'n' for no\n")
+                  f"Will {name[0]} go downstairs to check or not?"
+                  " 'y' for yes or 'n' for no\n")
         answer_go_downstairs = input("=> ").strip()
         clear()
         if answer_go_downstairs == "n":
             slow_type("\n"
-                      f"\033[1;31;48m{name} realised that the voice "
+                      f"\033[1;31;48m{name[0]} realised that the voice "
                       "did not sound exactly like mom!\n"
                       "So they called: Moooom?\n"
                       "No answer... \n"
-                      f"{name} ran and locked the door and hid "
+                      f"{name[0]} ran and locked the door and hid "
                       "under the bed...\n"
                       "Hoping that soon enough someone would arrive.")
             print(ascii_img.bed)
@@ -332,9 +336,9 @@ def story_homework():
             exit_app()
         elif answer_go_downstairs == "y":
             slow_type("\n"
-                      f"\033[1;31;48m{name} closed the books and walked "
+                      f"\033[1;31;48m{name[0]} closed the books and walked "
                       "downstairs, calling their dog to follow but he "
-                      f"wouldn't budge.\n {name} shrugged it off and"
+                      f"wouldn't budge.\n {name[0]} shrugged it off and"
                       " walked  downstairs and into the kitchen.\n"
                       "No one was there but what they saw sent a chill "
                       "down their spine.\n"
@@ -344,15 +348,15 @@ def story_homework():
                       "*They heard the sound of a creaking door*")
             clear()
             slow_type("\033[1;31;48mThe side door flew open beside them.\n"
-                      f"In the doorway stood {name}'s mom, groceries in hand."
-                      "But as if she was only just getting home, "
+                      f"In the doorway stood {name[0]}'s mom, groceries in "
+                      "hand. But as if she was only just getting home, "
                       "Who laid out the pots and pans?  Mom looked around "
                       "at the scattered pots and pans, confused."
-                      f"'Are you helping me cook tonight, {name}?'"
-                      f"'I didn't do this' replied {name}, as they and their"
-                      " mom looked around the kitchen…"
+                      f"'Are you helping me cook tonight, {name[0]}?'"
+                      f"'I didn't do this' replied {name[0]}, as they and "
+                      "their mom looked around the kitchen…"
                       "'Then who did?' asked mom\n"
-                      f"Disembodied voice: {name}... dinner is reaaaady")
+                      f"Disembodied voice: {name[0]}... dinner is reaaaady")
             clear()
             print(f"\033[1;31;48m{ascii_img.ghost}")
             clear()
@@ -370,8 +374,8 @@ def story_nap():
     Display the content for nap story
     """
     slow_type("\n"
-              f"\033[1;31;48mIt was night when {name} woke to a strange noise "
-              "coming from the closet...\n"
+              f"\033[1;31;48mIt was night when {name[0]} woke to a strange "
+              "noise coming from the closet...\n"
               "The rest of the house was quiet, but that noise...")
     clear()
     print(f"\033[1;31;48m{ascii_img.monster}")
