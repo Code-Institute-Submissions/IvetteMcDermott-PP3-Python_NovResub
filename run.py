@@ -103,7 +103,8 @@ def confirm_continue():
         clear()
         pick_story()
     else:
-        slow_type("That's not a valid option. Try again...\n")
+        slow_type("\n"
+                  "That's not a valid option. Try again...\n")
         confirm_continue()
 
 
@@ -227,19 +228,19 @@ def at_school_next_day():
     slow_type(f"\033[1;49;35mAnd then it happened again the next day.\n"
               "After days and days of Elizabeth not showing up,\n"
               f"{name[0]} confronted her at school\n""\n"
-              f"\033[1;49;93mWhy won't you walk home with me?"
+              f"\033[1;49;93m'Why won't you walk home with me?'"
               f"\033[1;49;35m they asked\n""\n"
-              f"\033[1;49;92mI walk home with Jessica now. "
+              f"\033[1;49;92m'I walk home with Jessica now.' "
               f"\033[1;49;35msaid Elizabeth\n"
-              f"\033[1;49;92mIt's no big deal sometimes things change.\n""\n"
+              f"\033[1;49;92m'It's no big deal sometimes things change.'\n""\n"
               f"\033[1;49;35m{name[0]} yelled at Elizabeth and screamed \n"
               "hateful things and heartbroken, ran home.\n")
     clear()
     slow_type("\033[1;49;35mAfter thinking about it a while, Elizabeth"
-              " felt bad for \n abandoning her friend,"
+              " felt bad for \nabandoning her friend,"
               f" so she decided to go to {name[0]}'s house\n"
               "\n""What do you think will happen?\n""\n"
-              "1. Make peace.\n 2. It was too late.\n""\n")
+              "1. Make peace.\n2. It was too late.\n""\n")
     next_day_selection = input("=> ").strip()
     if next_day_selection == "1":
         slow_type("\n"
@@ -254,7 +255,8 @@ def at_school_next_day():
         slow_type(f"\033[1;49;35mShe knocked on the door and {name[0]} opened"
                   " and let her in,""\n"
                   "said was going to get lemonade, so told Elizabeth\n"
-                  "\033[1;49;93m'You can go to my room while I get it'""\n"
+                  "\033[1;49;93m'\nYou can go to my room while I get it'\n"
+                  "\n"
                   "\033[1;49;35mBut Elizabeth for some reason headed to "
                   "the studio" "\n"
                   "and just as she was sitting at the desk, she saw"
@@ -305,7 +307,7 @@ def story_homework():
                   " end the homework,\n"
                   "they had dinner and saw a family movie, together"
                   " with dad.")
-        print(ascii_img.family)
+        print(ascii_img.FAMILY)
         clear()
         exit_app()
     elif answer_mom_arrived == "n":
@@ -346,7 +348,7 @@ def story_homework():
                       f"{name[0]} ran and locked the door and hid "
                       "under the bed...\n"
                       "Hoping that soon enough someone would arrive.")
-            print(ascii_img.bed)
+            print(ascii_img.BED)
             clear()
             exit_app()
         elif answer_go_downstairs == "y":
@@ -355,11 +357,11 @@ def story_homework():
                       "downstairs, calling their dog to follow but he "
                       f"wouldn't budge.\n{name[0]} shrugged it off and"
                       " walked  downstairs and into the kitchen.\n"
-                      "No one was there but what they saw sent a chill "
+                      "No one was there but what they saw sent a chill\n"
                       "down their spine.\n"
-                      "Every pot and pan in the house had been stacked "
+                      "Every pot and pan in the house had been stacked\n"
                       "neatly in the middle of the room.\n"
-                      "Cabinets lay open and empty."
+                      "Cabinets lay open and empty.\n"
                       "*They heard the sound of a creaking door*")
             clear()
             slow_type("\033[1;49;35mThe side door flew open beside them.\n"
@@ -378,7 +380,7 @@ def story_homework():
                       f"Disembodied voice: "
                       f"\033[1;49;34m{name[0]}... dinner is reaaaady")
             clear()
-            print(f"\033[1;49;35m{ascii_img.ghost}")
+            print(f"\033[1;49;35m{ascii_img.GHOST}")
             clear()
             exit_app()
         else:
@@ -398,7 +400,7 @@ def story_nap():
               "noise coming from the closet...\n"
               "The rest of the house was quiet, but that noise...")
     clear()
-    print(f"\033[1;49;35m{ascii_img.monster}")
+    print(f"\033[1;49;35m{ascii_img.MONSTER}")
     clear()
     exit_app()
 
