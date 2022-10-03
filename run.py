@@ -55,7 +55,6 @@ def age():
     a message and ask for a valid one
     Modified accorder to suggestions and guidance of my mentor Brian Macharia
     """
-
     slow_type("but first, tell me your age...\n")
     while True:
         age_input = input("=> ").strip()
@@ -107,7 +106,7 @@ def confirm_continue():
 
 def pick_story():
     """ Allows the user to pick the main direction of the story,
-    choosing between 3 options
+    choosing between 3 options: draw, homework or nap
     """
     print(f"\033[1;31;48m {ascii_img.HOUSE}\n")
     slow_type(f"{lines_and_stories.introduction[0]}\n"
@@ -117,7 +116,7 @@ def pick_story():
     slow_type(f"\033[1;31;48mTell me what do you think {name[0]} will do"
               " now that they are at home?\n")
     slow_type("\n"
-              " 1. Draw.\n 2. Do homework.\n 3. Take a nap.\n""\n")
+              "1. Draw.\n2. Do homework.\n3. Take a nap.\n""\n")
     stor_pick = input("=> ")
     picked = ""
     if int(stor_pick) == 1:
@@ -156,16 +155,16 @@ def story_draw():
               "always had a power that\n"
               "had kept secret... whatever drew came true!\n"
               f"Every day {name[0]} had played with Elizabeth, the best friend"
-              "\nanyone could have, they would play on magical creations that"
-              f"came straight from {name[0]}'s imagination.\n"
+              "\n anyone could have, they would play on magical creations"
+              f" that came straight from {name[0]}'s imagination.\n"
               "\n")
     print(ascii_img.PRINCESS)
     slow_type("\n""\033[1;31;48mBut as they got older, they grew apart.\n"
               f"{name[0]} threw themself deeper into painting.\n")
     clear()
     slow_type("\n \033[1;31;48mWhile Elizabeth played sports and started"
-              " hanging out\n"
-              "with another friend, Jessica, more often\n")
+              " hanging\n"
+              " out with another friend, Jessica, more often\n")
     print(ascii_img.BASKETBALL)
     slow_type("\n"
               "However, the two still maintained a tradition of meeting\n"
@@ -194,18 +193,21 @@ def story_draw():
                   "\n1. Yell for help?\n2. Keep walking.\n""\n")
         street_pick = input("=> ")
         if int(street_pick) == 1:
-            slow_type(f"So {name[0]} did, and a lady responded and helped"
+            slow_type("\n"
+                      f"So {name[0]} did, and a lady responded and helped"
                       " so they could make it back home\n")
             at_school_next_day()
         elif int(street_pick) == 2:
-            slow_type("\nSo that was the last time someone heard of \n"
+            slow_type("\n"
+                      "So that was the last time someone heard of \n"
                       f"{name[0]}, the only things that were left "
                       "were the drawings...\n")
             exit_app()
         else:
             slow_type("That's not a valid option. Try again...\n")
     elif int(draw_pick) == 3:
-        slow_type("\n"f"\033[1;31;48m{name[0]} went into the school and"
+        slow_type("\n"
+                  f"\033[1;31;48m{name[0]} went into the school and"
                   " dedicate their time to homework.\n"
                   "Never again drew or spoke to anybody else.""\n")
         exit_app()
@@ -228,26 +230,28 @@ def at_school_next_day():
               f"\033[1;31;48msaid Elizabeth\n"
               f"\033[1;32;48mIt's no big deal sometimes things change.\n""\n"
               f"\033[1;31;48m{name[0]} yelled at Elizabeth and screamed \n"
-              "hateful things and heartbroken, ran home\n")
+              "hateful things and heartbroken, ran home.\n")
     clear()
     slow_type("\033[1;31;48mAfter thinking about it a while, Elizabeth"
-              " felt bad for abandoning her friend,"
+              " felt bad for \n abandoning her friend,"
               f" so she decided to go to {name[0]}'s house\n"
               "\n""What do you think will happen?\n""\n"
               "1. Make peace.\n 2. It was too late.\n""\n")
     next_day_selection = input("=> ").strip()
     if next_day_selection == "1":
-        slow_type("They talked and fixed it, and returned to being friends,"
+        slow_type("\n"
+                  "They talked and fixed it, and returned to being friends,"
                   " understading their different interests.")
         exit_app()
     elif next_day_selection == "2":
-        slow_type(f"Elizabeth walked to {name[0]}'s house ... but it was too"
+        slow_type("\n"
+                  f"Elizabeth walked to {name[0]}'s house ... but it was too"
                   " late...\n")
         clear()
         slow_type(f"\033[1;31;48mShe knocked on the door and {name[0]} opened"
                   " and let her in,""\n"
                   "said was going to get lemonade, so told Elizabeth\n"
-                  "\033[1;36;48m You can go to my room while I get it""\n"
+                  "\033[1;36;48m 'You can go to my room while I get it'""\n"
                   "\033[1;31;48mBut Elizabeth for some reason headed to "
                   "the studio" "\n"
                   "and just as she was sitting at the desk, she saw"
@@ -260,8 +264,8 @@ def at_school_next_day():
                   "there she was...Jessica...Just like the drawing"
                   " in her hand...")
         clear()
-        slow_type("\033[1;31;48mThere was Jessica in front her eyes, laying"
-                  " in bed, tears on her cheeks ...she had no mouth!""\n""\n")
+        slow_type("\033[1;31;48mThere was Jessica in front her eyes, laying \n"
+                  "in bed, tears on her cheeks ...she had no mouth!""\n""\n")
         print(f"{ascii_img.GIRL}""\n")
         clear()
         exit_app()

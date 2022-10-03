@@ -26,7 +26,7 @@ As a returning user, I want to see the different endings of the story.
 
 ### Flowchart
 
-![]
+![](https://share.balsamiq.com/c/rX1TCfGCoBMT2giNVCjCkv.png)
 
 ## Features
 
@@ -62,9 +62,9 @@ The site had been developed on GitPod, committed and pushed to GitHub. And Herok
 
 Deployment proccess:
 
-1. Log in Github.
+1. Log in [Github](https://github.com/).
     - Open the repo to deploy. The one for the site is [here](https://github.com/IvetteMcDermott/PP3-Python).
-2. Log in Heroku.
+2. Log in [Heroku](https://www.heroku.com/).
     - Click in the "New" button in the top right.
     - Select "Create New App"
     - Give a name to the App and choose a region.
