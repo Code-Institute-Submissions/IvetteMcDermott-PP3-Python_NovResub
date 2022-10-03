@@ -23,8 +23,8 @@ def welcome():
     """
     Display the welcome message
     """
-    print(f"\033[1;45;48m{ascii_img.WELCOME}")
-    slow_type(f"\033[1;35;48m{lines_and_stories.WELC_LINE} \n")
+    print(f"\033[1;49;35m{ascii_img.WELCOME}")
+    slow_type(f"\033[1;49;25m{lines_and_stories.WELC_LINE} \n")
     slow_type("The only rule here is that you need to answer my questions \n"
               "where you see =>, so we can continue.\n")
 
