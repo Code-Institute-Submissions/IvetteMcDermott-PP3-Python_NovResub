@@ -140,7 +140,7 @@ def pick_story():
     elif int(stor_pick) == 3:
         picked = lines_and_stories.story_picked[2]
         slow_type("\n"
-                  f"You picked the right one there, {name[0]} headed to"
+                  f"You picked the right one there, {name[0]} headed to\n"
                   f" {picked}, so went to the second floor.\n")
         story_nap()
     else:
@@ -196,7 +196,8 @@ def story_draw():
                   "that they had never been in before, suddenly ..."
                   f" {name[0]} was lost!\n")
         slow_type("\n"
-                  f"What now... {name[0]} though\n"
+                  f"\033[1;49;93mWhat now... "
+                  f"\033[1;49;35m{name[0]} though\n"
                   "\n1. Yell for help?\n2. Keep walking.\n""\n")
         street_pick = input("=> ")
         if int(street_pick) == 1:
@@ -260,7 +261,8 @@ def at_school_next_day():
         slow_type(f"\033[1;49;35mShe knocked on the door and {name[0]} opened"
                   " and let her in,""\n"
                   "said was going to get lemonade, so told Elizabeth\n"
-                  "\033[1;49;93m'\nYou can go to my room while I get it'""\n"
+                  "\033[1;49;93m'You can go to my room while I get it'"
+                  "\n"
                   "\033[1;49;35mBut Elizabeth for some reason headed to "
                   "the studio" "\n"
                   "and just as she was sitting at the desk, she saw"
@@ -321,8 +323,8 @@ def story_homework():
                   "\033[1;49;35mRight, no one respond...\n"
                   "\033[1;49;93m'Probably just the wind'"
                   "\033[1;49;35m thought.\n"
-                  "\nAnd continued with the homework. An hour passed, almost "
-                  "finished the first \n assignment when they faintly heard "
+                  "\nAnd continued with the homework. An hour passed, almost\n"
+                  "finished the first assignment when they faintly heard\n"
                   "the sounds of pots and pans clanging downstairs.\n"
                   "But ...\n"
                   f"{name[0]} hadn't heard mom come in the door.\n"
@@ -378,7 +380,7 @@ def story_homework():
                       f"\033[1;49;96m'Are you helping me cook tonight, "
                       f"{name[0]}?'\n"
                       f"\033[1;49;93m'I didn't do this'\n"
-                      "\033[1;49;35m replied {name[0]}, as they and "
+                      f"\033[1;49;35m replied {name[0]}, as they and "
                       "their mom looked around the kitchen…\n"
                       "\033[1;49;96m'Then who did?' \n"
                       "\033[1;49;35masked mom\n"
