@@ -3,7 +3,7 @@ WELC_LINE = "This is spooky story time...hope you are ready to be scared.\n"
 
 story_picked = ["draw", "do your homework", "take a nap"]
 
-""" 
+"""
 Due to too long line, the secong elements of the list
 had being divided into two strings
 """

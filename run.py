@@ -103,7 +103,8 @@ def confirm_continue():
         clear()
         pick_story()
     else:
-        slow_type("That's not a valid option. Try again...\n")
+        slow_type("\n"
+                  "That's not a valid option. Try again...\n")
         confirm_continue()
 
 
@@ -143,7 +144,8 @@ def pick_story():
                   f" {picked}, so went to the second floor.\n")
         story_nap()
     else:
-        slow_type("That's not a valid option. Try again...\n")
+        slow_type("\n"
+                  "That's not a valid option. Try again...\n")
         pick_story()
 
 
@@ -183,7 +185,8 @@ def story_draw():
               " the school again and ask for more homework.\n""\n")
     draw_pick = input("=> ")
     if int(draw_pick) == 1:
-        slow_type("\n"f"{name[0]} then went home, and was enranged thinking "
+        slow_type("\n"
+                  f"{name[0]} then went home, and was enranged thinking "
                   "that Elizabeth\n"
                   "forgot about it. So passed the afternoon in bed upset.\n")
         at_school_next_day()
@@ -192,7 +195,8 @@ def story_draw():
                   " and walked... until they got into a strange street\n"
                   "that they had never been in before, suddenly ..."
                   f" {name[0]} was lost!\n")
-        slow_type(f"What now... {name[0]} though\n"
+        slow_type("\n"
+                  f"What now... {name[0]} though\n"
                   "\n1. Yell for help?\n2. Keep walking.\n""\n")
         street_pick = input("=> ")
         if int(street_pick) == 1:
@@ -207,7 +211,8 @@ def story_draw():
                       "were the drawings...\n")
             exit_app()
         else:
-            slow_type("That's not a valid option. Try again...\n")
+            slow_type("\n"
+                      "That's not a valid option. Try again...\n")
     elif int(draw_pick) == 3:
         slow_type("\n"
                   f"\033[1;49;35m{name[0]} went into the school and"
@@ -215,7 +220,8 @@ def story_draw():
                   "Never again drew or spoke to anybody else.""\n")
         exit_app()
     else:
-        slow_type("That's not a valid option. Try again...\n")
+        slow_type("\n"
+                  "That's not a valid option. Try again...\n")
         pick_story()
 
 
@@ -227,19 +233,19 @@ def at_school_next_day():
     slow_type(f"\033[1;49;35mAnd then it happened again the next day.\n"
               "After days and days of Elizabeth not showing up,\n"
               f"{name[0]} confronted her at school\n""\n"
-              f"\033[1;49;93mWhy won't you walk home with me?"
+              f"\033[1;49;93m'Why won't you walk home with me?'"
               f"\033[1;49;35m they asked\n""\n"
-              f"\033[1;49;92mI walk home with Jessica now. "
+              f"\033[1;49;92m'I walk home with Jessica now.' "
               f"\033[1;49;35msaid Elizabeth\n"
-              f"\033[1;49;92mIt's no big deal sometimes things change.\n""\n"
+              f"\033[1;49;92m'It's no big deal sometimes things change.'\n""\n"
               f"\033[1;49;35m{name[0]} yelled at Elizabeth and screamed \n"
               "hateful things and heartbroken, ran home.\n")
     clear()
     slow_type("\033[1;49;35mAfter thinking about it a while, Elizabeth"
-              " felt bad for \n abandoning her friend,"
+              " felt bad for \nabandoning her friend,"
               f" so she decided to go to {name[0]}'s house\n"
               "\n""What do you think will happen?\n""\n"
-              "1. Make peace.\n 2. It was too late.\n""\n")
+              "1. Make peace.\n2. It was too late.\n""\n")
     next_day_selection = input("=> ").strip()
     if next_day_selection == "1":
         slow_type("\n"
@@ -254,7 +260,7 @@ def at_school_next_day():
         slow_type(f"\033[1;49;35mShe knocked on the door and {name[0]} opened"
                   " and let her in,""\n"
                   "said was going to get lemonade, so told Elizabeth\n"
-                  "\033[1;49;93m'You can go to my room while I get it'""\n"
+                  "\033[1;49;93m'\nYou can go to my room while I get it'""\n"
                   "\033[1;49;35mBut Elizabeth for some reason headed to "
                   "the studio" "\n"
                   "and just as she was sitting at the desk, she saw"
@@ -273,7 +279,8 @@ def at_school_next_day():
         clear()
         exit_app()
     else:
-        slow_type("\033[1;49;35mThat's not a valid option. Try again...\n")
+        slow_type("\n"
+                  "\033[1;49;35mThat's not a valid option. Try again...\n")
         at_school_next_day()
 
 
@@ -355,11 +362,11 @@ def story_homework():
                       "downstairs, calling their dog to follow but he "
                       f"wouldn't budge.\n{name[0]} shrugged it off and"
                       " walked  downstairs and into the kitchen.\n"
-                      "No one was there but what they saw sent a chill "
+                      "No one was there but what they saw sent a chill\n"
                       "down their spine.\n"
-                      "Every pot and pan in the house had been stacked "
+                      "Every pot and pan in the house had been stacked\n"
                       "neatly in the middle of the room.\n"
-                      "Cabinets lay open and empty."
+                      "Cabinets lay open and empty.\n"
                       "*They heard the sound of a creaking door*")
             clear()
             slow_type("\033[1;49;35mThe side door flew open beside them.\n"
@@ -382,10 +389,12 @@ def story_homework():
             clear()
             exit_app()
         else:
-            slow_type("\nThat's not a valid option. Try again...\n")
+            slow_type("\n"
+                      "\nThat's not a valid option. Try again...\n")
             story_homework()
     else:
-        slow_type("\nThat's not a valid option. Try again...\n")
+        slow_type("\n"
+                  "\nThat's not a valid option. Try again...\n")
         story_homework()
 
 
@@ -416,7 +425,7 @@ def exit_app():
     """
     Display the end banner, and exit the app after a second
     """
-    print("\n""\n"
+    print("\n""\n""\n""\n""\n""\n"
           f"\033[1;49;35m{ascii_img.END_BANNER}")
     time.sleep(1)
     sys.exit()
