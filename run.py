@@ -305,7 +305,7 @@ def story_homework():
                   " end the homework,\n"
                   "they had dinner and saw a family movie, together"
                   " with dad.")
-        print(ascii_img.family)
+        print(ascii_img.FAMILY)
         clear()
         exit_app()
     elif answer_mom_arrived == "n":
@@ -346,7 +346,7 @@ def story_homework():
                       f"{name[0]} ran and locked the door and hid "
                       "under the bed...\n"
                       "Hoping that soon enough someone would arrive.")
-            print(ascii_img.bed)
+            print(ascii_img.BED)
             clear()
             exit_app()
         elif answer_go_downstairs == "y":
@@ -378,7 +378,7 @@ def story_homework():
                       f"Disembodied voice: "
                       f"\033[1;49;34m{name[0]}... dinner is reaaaady")
             clear()
-            print(f"\033[1;49;35m{ascii_img.ghost}")
+            print(f"\033[1;49;35m{ascii_img.GHOST}")
             clear()
             exit_app()
         else:
@@ -398,7 +398,7 @@ def story_nap():
               "noise coming from the closet...\n"
               "The rest of the house was quiet, but that noise...")
     clear()
-    print(f"\033[1;49;35m{ascii_img.monster}")
+    print(f"\033[1;49;35m{ascii_img.MONSTER}")
     clear()
     exit_app()
 
