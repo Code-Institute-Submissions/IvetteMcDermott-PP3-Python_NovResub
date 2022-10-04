@@ -141,7 +141,7 @@ def pick_story():
         picked = lines_and_stories.story_picked[2]
         slow_type("\n"
                   f"You picked the right one there, {name[0]} headed to\n"
-                  f" {picked}, so went to the second floor.\n")
+                  f"{picked}, so went to the second floor.\n")
         story_nap()
     else:
         slow_type("\n"

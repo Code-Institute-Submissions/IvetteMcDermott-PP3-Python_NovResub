@@ -45,10 +45,30 @@ A background image had been set in html for the body, it corresponds to a haunte
 
 The terminal keeps the black background and the text had been set to purple. Also some other colors had been use for texts that belong to a character.  The decisions in the game had been keep in purple as the most of the text, considering that all is being relayed by the narrator.
 
+The text is keep to few lines by screen, and the clean screen function has a delay of 3 seconds to give time to the user to read and observe the ascii arts.
+
 ## **Features**
 ------
 
 The terminal displayed is the default from the CI template with some minor adjustements for better visual according to the idea of the project.
+<br>
+Welcome Screenshot
+![](https://res.cloudinary.com/dwjq6izv5/image/upload/v1664817657/PP1/PP3%20/Welcome_SS_wxjmri.png)
+<br>
+Request Name Input and Age Input and shows the validation on them
+![](https://res.cloudinary.com/dwjq6izv5/image/upload/v1664817566/PP1/PP3%20/age_validation_for_over_99_jqaszr.png)
+<br>
+Validation for under 9s, as the story is for 10+
+![](https://res.cloudinary.com/dwjq6izv5/image/upload/v1664817563/PP1/PP3%20/age_validation_under_10_nyr2xc.png)
+<br>
+Screenshot of the decision of no start the story
+![](https://res.cloudinary.com/dwjq6izv5/image/upload/v1664817566/PP1/PP3%20/confirmation_to_start_pick_no_to_u571zg.png)
+<br>
+Screenshot of the format for multiple options presented to the user
+![](https://res.cloudinary.com/dwjq6izv5/image/upload/v1664817561/PP1/PP3%20/first_decision_to_make-direction_mihxtl.png)
+<br>
+Screenshot of the format for yes or no options presented to the user
+![](https://res.cloudinary.com/dwjq6izv5/image/upload/v1664895882/PP1/PP3%20/yes_or_no_pnz55a.png)
 <br>
 
 ### **Features to implement in future**
@@ -59,26 +79,67 @@ More options and twists could be added to it, to increase and extend the adventu
 ## **Technologies Used**
 ------
 
-- Python
-- GitHub
-- GitPod
-- Heroku
-- LucidCharts
-- Cloudinary
+- [Python](https://www.python.org/)
+- [GitHub](https://github.com/)
+- [GitPod](https://www.gitpod.io/)
+- [Heroku](https://www.heroku.com/about)
+- [LucidCharts](https://www.lucidchart.com/pages/)
+- [Cloudinary](https://cloudinary.com/)
 <br>
 
 ## **Testing**
 -------
-<br>
 
 ### **Validation**
 
-- Pep8
-- Linting in terminal
+At the moment of conclude the project the site pep8 still down, for that reason got in touch with Tutor Assistance and Student Support both guide me into use the pycodestyle built in my workspace in gitpod, path that I followed and resulting as screenshot below shows.
+<br>
+
+![](https://res.cloudinary.com/dwjq6izv5/image/upload/v1664881623/PP1/PP3%20/linter_in_terminal_py_kaqyk7.png)
+<br>
+Linter shows no error for run.py file. Howsoever it shows three warnings related to ms-toolsai.jupyter extension and .gitpod.yml but these are no part of the code, or anything that interfear with the app so they had been left alone as talked with Tutor Assistance area.
+
+It also shows no errors for the file lines_and_stories.py. Instead for the ascii_img.py shows up to 30 errors but this is down to the file containing ascii arts which the linter does not recognise, at the begin there were over 72 errors but they were reduced with minors modifications in the arts, but those had been left as the visual would be affect.
+<br>
+![](https://res.cloudinary.com/dwjq6izv5/image/upload/v1664882598/PP1/PP3%20/linter_in_ascii_arts_py_g4wr4t.png)
+<br>
+The validation for layout.html shows no error, this had been run as there were small modifications made on it for better visual.
+<br>
+![](https://res.cloudinary.com/dwjq6izv5/image/upload/v1664882792/PP1/PP3%20/validator_html_w6qvpv.png)
 <br>
 
 ### **Testing**
-Manual testing (validation for no valid answers, display of corrects tests after the selected option)
+Manual 
+<br>
+| Feature | Test Action | Validation for Wrong Input  | Test Outcome |
+|:---|        :---| :---|:---|
+| Name Input | Type in user's name | Check if empty | Pass |
+| Age Input | Type in user's age | Check if age is between 10 and 99, or empty | Pass |
+| Confirm to start | Choose y or n | Check that there is no different input | Pass |
+| Pick between three options "Decision main" | Choose 1, 2 or 3 | Check that there is no different input or empty| Pass |
+||
+
+If picked 1 in "Decision Main"
+| Feature | Test Action | Validation for Wrong Input  | Test Outcome |
+|:---|        :---| :---|:---|
+| Pick between three options "Decision After School" 1 | Choose 1, 2 or 3 | Check that there is no different input or empty | Pass |
+| Pick between three options "Decision After School" 2 | Choose 1 or 2 | Check that there is no different input or empty | Pass |
+| Pick between three options "Decision Lost" | Choose 1 or 2 | Check that there is no different input or empty | Pass |
+||
+
+If picked 2 in "Decision Main"
+| Feature | Test Action | Validation for Wrong Input  | Test Outcome |
+|:---|        :---| :---|:---|
+| Pick between two options "Decision Is Mom Home" | Choose 1 or 2 | Check that there is no different input or empty | Pass |
+| Pick between two options "Decision Go Downstairs" | Choose 1 or 2 | Check that there is no different input or empty | Pass |
+||
+
+If picked 3 in "Decision Main"
+| Feature | Test Action | Validation for Wrong Input  | Test Outcome |
+|:---|        :---| :---|:---|
+| Display text and lead to one of the ends | -- | -- |Pass |
+||||
+
 <br>
 
 ## **Deployment**
@@ -117,11 +178,21 @@ Steps to use and deploy this repository:
 <br>
 
 ### **Text**
+The stories had been taken and modify from the video "8 Scary Ghost Stories (Don't watch alone...)" from the YouTube Channel [Peacock Kids](https://youtu.be/gh0BD4Ut9Tw) 
 <br>
 
 ### **Arts**
+The arts and banners had been taken and created with 
+
+[EmojiCombos](https://emojicombos.com/monster-ascii-art)
+[ManyTools](https://manytools.org/hacker-tools/ascii-banner/)
+[Ascii Art](https://www.asciiart.eu/)
+[Wallpaper Flare](https://www.wallpaperflare.com/4k-moon-haunted-house-bats-wallpaper-uhagw)
 <br>
 
 ### **Code**
+[Learn learn Scratch Tutorials](https://www.youtube.com/watch?v=2h8e0tXHfk0) Code for slow typing.
+[Rick Atherton](https://github.com/RickofManc/vv-pizzas) Code for clean screen.
+Also thanks to my mentor Brian Macharia, who had guide me in the project and specially in the refactoring on the validation of my age function. 
 <br>
 
