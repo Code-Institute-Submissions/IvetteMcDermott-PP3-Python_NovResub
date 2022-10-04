@@ -11,7 +11,6 @@ The goal of this website is promoting reading and making decisions through an in
 <br>
 
 ## **UX**
--------
 <br>
 
 ### **Ideal User**
@@ -39,7 +38,8 @@ As a returning user, I want to see the different endings of the story.
 <br>
 
 ## **Design**
-------
+<br>
+
 Being the theme of the app "Spooky Stories" and down to the Halloween season being so close. The app colors had been picked to go with it.  Purple and black, mainly these colors are use often in children's spooky stories and are appropiate for the season.
 A background image had been set in html for the body, it corresponds to a haunted house in the theme colors picked. Some CSS had been added and modified for the size of the terminal, padding, the button, and other minor adjusts for a better visual experience. 
 
@@ -48,7 +48,7 @@ The terminal keeps the black background and the text had been set to purple. Als
 The text is kept to a few lines by screen, and the clean screen function has a delay of 3 seconds to give time to the user to read and observe the ascii arts.
 
 ## **Features**
-------
+<br>
 
 The terminal displayed is the default from the CI template with some minor adjustements for better visual according to the idea of the project.
 <br>
@@ -102,7 +102,7 @@ More options and twists could be added to it, to increase and extend the adventu
 <br>
 
 ## **Technologies Used**
-------
+<br>
 
 - [Python](https://www.python.org/)
 - [GitHub](https://github.com/)
@@ -113,7 +113,7 @@ More options and twists could be added to it, to increase and extend the adventu
 <br>
 
 ## **Testing**
--------
+<br>
 The site had been tested in Chrome, Firefox and Edge without noticable trouble.  
 Safari won't run the app but it shows it, seen that I reached Tutor Assistance and the answer was that the terminal won't run on OS or Mobile so it should be expected and to mention it.
 <br>
@@ -143,8 +143,7 @@ The validation for layout.html shows no error, this had been run as there were s
 ![](https://res.cloudinary.com/dwjq6izv5/image/upload/v1664882792/PP1/PP3%20/validator_html_w6qvpv.png)
 <br>
 
-### **Testing**
-Manual 
+### **Manual Testing**
 <br>
 
 | Feature | Test Action | Validation for Wrong Input  | Test Outcome |
@@ -179,7 +178,7 @@ If picked 3 in "Decision Main"
 <br>
 
 ## **Deployment**
-------
+<br>
 The site had been deployed through Heroku. 
 
 The site had been developed on GitPod, committed and pushed to GitHub. And Heroku once the site is deployed would update automatically.
@@ -210,7 +209,6 @@ Steps to use and deploy this repository:
 <br>
 
 ## **Credits**
-------
 <br>
 
 ### **Text**
