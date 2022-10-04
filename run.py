@@ -9,7 +9,8 @@ name = []
 
 
 def slow_type(data):
-    """ Slow down the print time for one line, taken from tutorial,
+    """ 
+    Slow down the print time for one line, taken from tutorial,
     credit in README
     """
     for character in data:
@@ -169,7 +170,7 @@ def story_draw():
     clear()
     slow_type("\n \033[1;49;35mWhile Elizabeth played sports and started"
               " hanging\n"
-              " out with another friend, Jessica, more often\n")
+              "out with another friend, Jessica, more often\n")
     print(ascii_img.BASKETBALL)
     slow_type("\n"
               "However, the two still maintained a tradition of meeting\n"
@@ -192,7 +193,7 @@ def story_draw():
         at_school_next_day()
     elif int(draw_pick) == 2:
         slow_type("\n"f"So {name[0]} went looking for Elizabeth, and walked\n"
-                  " and walked... until they got into a strange street\n"
+                  "and walked... until they got into a strange street\n"
                   "that they had never been in before, suddenly ..."
                   f" {name[0]} was lost!\n")
         slow_type("\n"
@@ -243,15 +244,16 @@ def at_school_next_day():
               "hateful things and heartbroken, ran home.\n")
     clear()
     slow_type("\033[1;49;35mAfter thinking about it a while, Elizabeth"
-              " felt bad for \nabandoning her friend,"
+              " felt bad for \n"
+              "abandoning her friend,"
               f" so she decided to go to {name[0]}'s house\n"
               "\n""What do you think will happen?\n""\n"
               "1. Make peace.\n2. It was too late.\n""\n")
     next_day_selection = input("=> ").strip()
     if next_day_selection == "1":
         slow_type("\n"
-                  "They talked and fixed it, and returned to being friends,"
-                  " understading their different interests.")
+                  "They talked and fixed it, and returned to being friends,\n"
+                  "understading their different interests.")
         exit_app()
     elif next_day_selection == "2":
         slow_type("\n"
@@ -362,7 +364,8 @@ def story_homework():
             slow_type("\n"
                       f"\033[1;49;35m{name[0]} closed the books and walked \n"
                       "downstairs, calling their dog to follow but he "
-                      f"wouldn't budge.\n{name[0]} shrugged it off and"
+                      f"wouldn't budge.\n"
+                      f"{name[0]} shrugged it off and"
                       " walked  downstairs and into the kitchen.\n"
                       "No one was there but what they saw sent a chill\n"
                       "down their spine.\n"
