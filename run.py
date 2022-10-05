@@ -130,13 +130,14 @@ def pick_story():
         slow_type("\n"
                   f"You were right, {name[0]} headed to {picked},"
                   " so they went to the studio.\n")
-        time.sleep(3)
+        clear()
         story_draw()
     elif int(stor_pick) == 2:
         picked = lines_and_stories.story_picked[1]
         slow_type("\n"
                   f"Yes, {name[0]} headed to {picked}, so they went to "
                   "work at\ntheir desk.\n")
+        clear()
         story_homework()
     elif int(stor_pick) == 3:
         picked = lines_and_stories.story_picked[2]
@@ -168,7 +169,7 @@ def story_draw():
     slow_type("\n""\033[1;49;35mBut as they got older, they grew apart.\n"
               f"{name[0]} threw themself deeper into painting.\n")
     clear()
-    slow_type("\n \033[1;49;35mWhile Elizabeth played sports and started"
+    slow_type("\n\033[1;49;35mWhile Elizabeth played sports and started"
               " hanging\n"
               "out with another friend, Jessica, more often\n")
     print(ascii_img.BASKETBALL)
@@ -205,12 +206,14 @@ def story_draw():
             slow_type("\n"
                       f"So {name[0]} did, and a lady responded and helped"
                       " so they could make it back home\n")
+            clear()
             at_school_next_day()
         elif int(street_pick) == 2:
             slow_type("\n"
                       "So that was the last time someone heard of \n"
                       f"{name[0]}, the only things that were left "
                       "were the drawings...\n")
+            clear()
             exit_app()
         else:
             slow_type("\n"
@@ -220,6 +223,7 @@ def story_draw():
                   f"\033[1;49;35m{name[0]} went into the school and"
                   " dedicate their time to homework.\n"
                   "Never again drew or spoke to anybody else.""\n")
+        clear()
         exit_app()
     else:
         slow_type("\n"
@@ -254,6 +258,7 @@ def at_school_next_day():
         slow_type("\n"
                   "They talked and fixed it, and returned to being friends,\n"
                   "understading their different interests.")
+        clear()
         exit_app()
     elif next_day_selection == "2":
         slow_type("\n"
@@ -269,7 +274,7 @@ def at_school_next_day():
                   "the studio" "\n"
                   "and just as she was sitting at the desk, she saw"
                   " something that shocked her!\n""\n"
-                  "she couldn't believe it! She had to run to see "
+                  "She couldn't believe it! She had to run to see "
                   "Jessica now!!\n"
                   "So she did. When she got to Jessica's home"
                   " she even didn't \n"
@@ -296,6 +301,7 @@ def story_homework():
     clear()
     slow_type("\033[1;49;35mBut the house was quiet after school now.\n"
               "No one was there.\n"
+              "\n"
               f"So {name[0]} settled in to began the homework "
               "waiting for their mom to get back home.\n"
               "Her dog sat beside her.\n"
@@ -323,6 +329,7 @@ def story_homework():
         clear()
         slow_type("\n"
                   "\033[1;49;35mRight, no one respond...\n"
+                  "\n"
                   "\033[1;49;93m'Probably just the wind'"
                   "\033[1;49;35m thought.\n"
                   "\nAnd continued with the homework. An hour passed, almost\n"
@@ -367,26 +374,33 @@ def story_homework():
                       f"wouldn't budge.\n"
                       f"{name[0]} shrugged it off and"
                       " walked  downstairs and into the kitchen.\n"
+                      "\n"
                       "No one was there but what they saw sent a chill\n"
                       "down their spine.\n"
+                      "\n"
                       "Every pot and pan in the house had been stacked\n"
                       "neatly in the middle of the room.\n"
                       "Cabinets lay open and empty.\n"
+                      "\n"
                       "*They heard the sound of a creaking door*")
             clear()
             slow_type("\033[1;49;35mThe side door flew open beside them.\n"
                       f"In the doorway stood {name[0]}'s mom, groceries in \n"
                       "hand. But as if she was only just getting home, \n"
                       "\033[1;49;96m'Who laid out the pots and pans?' \n"
-                      "\033[1;49;35m Mom looked around "
+                      "\033[1;49;35mMom looked around "
                       "at the \nscattered pots and pans, confused.\n"
+                      "\n"
                       f"\033[1;49;96m'Are you helping me cook tonight, "
                       f"{name[0]}?'\n"
+                      "\n"
                       f"\033[1;49;93m'I didn't do this'\n"
-                      f"\033[1;49;35m replied {name[0]}, as they and "
+                      f"\033[1;49;35mreplied {name[0]}, as they and "
                       "their mom looked around the kitchen…\n"
+                      "\n"
                       "\033[1;49;96m'Then who did?' \n"
                       "\033[1;49;35masked mom\n"
+                      "\n"
                       f"Disembodied voice: "
                       f"\033[1;49;34m{name[0]}... dinner is reaaaady")
             clear()
