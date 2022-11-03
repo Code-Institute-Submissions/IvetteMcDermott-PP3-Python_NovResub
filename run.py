@@ -9,7 +9,7 @@ name = []
 
 
 def slow_type(data):
-    """ 
+    """
     Slow down the print time for one line, taken from tutorial,
     credit in README
     """
