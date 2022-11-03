@@ -90,74 +90,83 @@ def confirm_continue():
     """
     slow_type("\n"
               "Do you want to continue? 'y' for yes or 'n' for no \n")
-    answer = input("=> ")
-    if answer == "n":
-        slow_type("\n"
-                  "So you chickened out?\n"
-                  "I did not expect that from you.\n")
-        print(ascii_img.CHICKEN)
-        clear()
-        exit_app()
-    elif answer == 'y':
-        slow_type("\n"
-                  "Seems I met a brave one, let's start...\n")
-        clear()
-        pick_story()
-    else:
-        slow_type("\n"
-                  "That's not a valid option. Try again...\n")
-        confirm_continue()
+    while True:
+        answer = input("=> ").strip()
+        if not answer.isalpha():
+            slow_type("\n"
+                      "That's not a valid option. Try again...\n")
+            continue
+        if answer.lower() == "n":
+            slow_type("\n"
+                      "So you chickened out?\n"
+                      "I did not expect that from you.\n")
+            print(ascii_img.CHICKEN)
+            clear()
+            exit_app()
+        elif answer.lower() == 'y':
+            slow_type("\n"
+                      "Seems I met a brave one, let's start...\n")
+            clear()
+            print(f"\033[1;49;35m{ascii_img.HOUSE}\n")
+            slow_type(f"{lines_and_stories.introduction[0]}\n"
+                      f"{name[0]}, {lines_and_stories.introduction[1]}\n"
+                      f"{lines_and_stories.introduction[2]}\n")
+            pick_story()
+        else:
+            slow_type("\n"
+                      "That's not a valid option. Try again...\n")
+            confirm_continue()
 
 
 def pick_story():
     """ Allows the user to pick the main direction of the story,
     choosing between 3 options: draw, homework or nap
     """
-    print(f"\033[1;49;35m{ascii_img.HOUSE}\n")
-    slow_type(f"{lines_and_stories.introduction[0]}\n"
-              f"{name[0]}, {lines_and_stories.introduction[1]}\n"
-              f"{lines_and_stories.introduction[2]}\n")
     clear()
     slow_type(f"\033[1;49;35mTell me what do you think {name[0]} will do "
               "now that they are\nat home?\n")
     slow_type("\n"
               "1. Draw.\n2. Do homework.\n3. Take a nap.\n""\n")
-    stor_pick = input("=> ")
-    picked = ""
-    if int(stor_pick) == 1:
-        picked = lines_and_stories.story_picked[0]
-        print(f"\033[1;49;35m{ascii_img.DOING_ART}")
-        slow_type("\n"
-                  f"You were right, {name[0]} headed to {picked},"
-                  " so they went to the studio.\n")
-        clear()
-        story_draw()
-    elif int(stor_pick) == 2:
-        picked = lines_and_stories.story_picked[1]
-        slow_type("\n"
-                  f"Yes, {name[0]} headed to {picked}, so they went to "
-                  "work at\ntheir desk.\n")
-        clear()
-        story_homework()
-    elif int(stor_pick) == 3:
-        picked = lines_and_stories.story_picked[2]
-        slow_type("\n"
-                  f"You picked the right one there, {name[0]} headed to\n"
-                  f"{picked}, so went to the second floor.\n")
-        story_nap()
-    else:
-        slow_type("\n"
-                  "That's not a valid option. Try again...\n")
-        pick_story()
+    while True:
+        stor_pick = input("=> ").strip()
+        picked = ""
+        if not stor_pick.isdigit():
+            slow_type("\n"
+                      "That's not a valid option. Try again...\n")
+            continue
+        if int(stor_pick) == 1:
+            picked = lines_and_stories.story_picked[0]
+            print(f"\033[1;49;35m{ascii_img.DOING_ART}")
+            slow_type("\n"
+                      f"You were right, {name[0]} headed to {picked},"
+                      " so they went to the studio.\n")
+            clear()
+            story_draw()
+        elif int(stor_pick) == 2:
+            picked = lines_and_stories.story_picked[1]
+            slow_type("\n"
+                      f"Yes, {name[0]} headed to {picked}, so they went to "
+                      "work at\ntheir desk.\n")
+            clear()
+            story_homework()
+        elif int(stor_pick) == 3:
+            picked = lines_and_stories.story_picked[2]
+            slow_type("\n"
+                      f"You picked the right one there, {name[0]} headed to\n"
+                      f"{picked}, so went to the second floor.\n")
+            story_nap()
+        else:
+            slow_type("\n"
+                      "That's not a valid option. Try again...\n")
+            pick_story()
 
 
 def story_draw():
-    """
+    """ 
     Runs the option for the drawing story
     """
     draw_pick = ""
     street_pick = ""
-    clear()
     slow_type(f"\033[1;49;35mEvery since was young {name[0]} "
               "always had a power that\n"
               "had kept secret... whatever drew came true!\n"
@@ -185,57 +194,67 @@ def story_draw():
               f"\033[1;49;35m though {name[0]}\n")
     slow_type("\n1. Go home.\n2. Go looking for Elizabeth.\n3. Go back into"
               " the school again and ask for more homework.\n""\n")
-    draw_pick = input("=> ")
-    if int(draw_pick) == 1:
-        slow_type("\n"
-                  f"{name[0]} then went home, and was enranged thinking "
-                  "that Elizabeth\n"
-                  "forgot about it. So passed the afternoon in bed upset.\n")
-        at_school_next_day()
-    elif int(draw_pick) == 2:
-        slow_type("\n"f"So {name[0]} went looking for Elizabeth, and walked\n"
-                  "and walked... until they got into a strange street\n"
-                  "that they had never been in before, suddenly ..."
-                  f" {name[0]} was lost!\n")
-        slow_type("\n"
-                  f"\033[1;49;93mWhat now... "
-                  f"\033[1;49;35m{name[0]} though\n"
-                  "\n1. Yell for help?\n2. Keep walking.\n""\n")
-        street_pick = input("=> ")
-        if int(street_pick) == 1:
+    while True:
+        draw_pick = input("=> ").strip()
+        if not draw_pick.isdigit():
             slow_type("\n"
-                      f"So {name[0]} did, and a lady responded and helped"
-                      " so they could make it back home\n")
-            clear()
+                      "That's not a valid option. Try again...\n")
+            continue
+        if int(draw_pick) == 1:
+            slow_type("\n"
+                      f"{name[0]} then went home, and was enranged thinking "
+                      "that Elizabeth\n"
+                      "forgot about it. So passed the afternoon in bed upset."
+                      "\n")
             at_school_next_day()
-        elif int(street_pick) == 2:
+        elif int(draw_pick) == 2:
+            slow_type("\n"f"So {name[0]} went looking for Elizabeth,"
+                      "and walked and walked until they got into a strange\n"
+                      "street that they had never been in before, suddenly ..."
+                      f" {name[0]} was lost!\n")
             slow_type("\n"
-                      "So that was the last time someone heard of \n"
-                      f"{name[0]}, the only things that were left "
-                      "were the drawings...\n")
+                      f"\033[1;49;93mWhat now... "
+                      f"\033[1;49;35m{name[0]} though\n"
+                      "\n1. Yell for help?\n2. Keep walking.\n""\n")
+            while True:
+                street_pick = input("=> ").strip()
+                if not street_pick.isdigit():
+                    slow_type("\n"
+                              "That's not a valid option. Try again...\n")
+                    continue
+                if int(street_pick) == 1:
+                    slow_type("\n"
+                              f"So {name[0]} did, and a lady responded and "
+                              "helped so they could make it back home\n")
+                    clear()
+                    at_school_next_day()
+                elif int(street_pick) == 2:
+                    slow_type("\n"
+                              "So that was the last time someone heard of \n"
+                              f"{name[0]}, the only things that were left "
+                              "were the drawings...\n")
+                    clear()
+                    exit_app()
+                else:
+                    slow_type("\n"
+                              "That's not a valid option. Try again...\n")
+        elif int(draw_pick) == 3:
+            slow_type("\n"
+                      f"\033[1;49;35m{name[0]} went into the school and"
+                      " dedicate their time to homework.\n"
+                      "Never again drew or spoke to anybody else.""\n")
             clear()
             exit_app()
         else:
             slow_type("\n"
                       "That's not a valid option. Try again...\n")
-    elif int(draw_pick) == 3:
-        slow_type("\n"
-                  f"\033[1;49;35m{name[0]} went into the school and"
-                  " dedicate their time to homework.\n"
-                  "Never again drew or spoke to anybody else.""\n")
-        clear()
-        exit_app()
-    else:
-        slow_type("\n"
-                  "That's not a valid option. Try again...\n")
-        pick_story()
+            story_draw()
 
 
 def at_school_next_day():
     """
     Display next part of the story draw
     """
-    clear()
     slow_type(f"\033[1;49;35mAnd then it happened again the next day.\n"
               "After days and days of Elizabeth not showing up,\n"
               f"{name[0]} confronted her at school\n""\n"
