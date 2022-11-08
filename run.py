@@ -158,13 +158,13 @@ def pick_story():
         else:
             slow_type("\n"
                       "That's not a valid option. Let's try again...\n")
-            pick_story()
 
 
 def story_draw():
     """
     Runs the option for the drawing story
     """
+    clear()
     draw_pick = ""
     street_pick = ""
     slow_type(f"\033[1;49;35mEvery since was young {name[0]} "
@@ -249,13 +249,13 @@ def story_draw():
         else:
             slow_type("\n"
                       "That's not a valid option. Let's try again...\n")
-            story_draw()
 
 
 def at_school_next_day():
     """
     Display next part of the story draw
     """
+    clear()
     slow_type(f"\033[1;49;35mAnd then it happened again the next day.\n"
               "After days and days of Elizabeth not showing up,\n"
               f"{name[0]} confronted her at school\n""\n"
@@ -318,7 +318,6 @@ def at_school_next_day():
             slow_type("\n"
                       "\033[1;49;35mThat's not a valid option. Let's try again"
                       "...\n")
-            at_school_next_day()
 
 
 def story_homework():
@@ -348,7 +347,7 @@ def story_homework():
             slow_type("\n"
                       "That's not a valid option. Try again...\n")
             continue
-        if answer_mom_arrived == "y":
+        if answer_mom_arrived.lower() == "y":
             clear()
             slow_type("\n"
                       f"\033[1;49;35mYes! Mom was home, and as soon as "
@@ -359,7 +358,7 @@ def story_homework():
             print(ascii_img.FAMILY)
             clear()
             exit_app()
-        elif answer_mom_arrived == "n":
+        elif answer_mom_arrived.lower() == "n":
             clear()
             slow_type("\n"
                       "\033[1;49;35mRight, no one respond...\n"
@@ -387,14 +386,14 @@ def story_homework():
                       "\n"
                       f"Will {name[0]} go downstairs to check or not?"
                       " 'y' for yes or 'n' for no\n")
-            clear()
             while True:
                 answer_go_downstairs = input("=> ").strip()
                 if not answer_go_downstairs.isalpha():
                     slow_type("\n"
-                              "That's not a valid option. Try again...\n")
+                              "\033[1;49;35mThat's not a valid option. Try "
+                              "again...\n")
                     continue
-                if answer_go_downstairs == "n":
+                if answer_go_downstairs.lower() == "n":
                     slow_type("\n"
                               f"\033[1;49;35m{name[0]} realised that the voice"
                               " did not sound exactly like mom!\n"
@@ -407,7 +406,7 @@ def story_homework():
                     print(ascii_img.BED)
                     clear()
                     exit_app()
-                elif answer_go_downstairs == "y":
+                elif answer_go_downstairs.lower() == "y":
                     slow_type("\n"
                               f"\033[1;49;35m{name[0]} closed the books and "
                               "walked \n"
@@ -455,24 +454,24 @@ def story_homework():
                     clear()
                     exit_app()
                 else:
-                    slow_type("\n \n"
+                    slow_type("\n"
                               "That's not a valid option. Let's try again..."
                               "\n")
-                    story_homework()
-            else:
-                slow_type("\n"
-                          "\nThat's not a valid option. Let's try again...\n")
-                story_homework()
+        else:
+            slow_type("\n"
+                      "That's not a valid option. Let's try again...\n")
 
 
 def story_nap():
     """
     Display the content for nap story
     """
+    clear()
     slow_type("\n"
               f"\033[1;49;35mIt was night when {name[0]} woke to a strange "
               "noise coming from the closet...\n"
-              "The rest of the house was quiet, but that noise...")
+              "The rest of the house was quiet, but that noise..."
+              f"{name[0]} got out the bed and when open the bedroom door...")
     clear()
     print(f"\033[1;49;35m{ascii_img.MONSTER}")
     clear()
