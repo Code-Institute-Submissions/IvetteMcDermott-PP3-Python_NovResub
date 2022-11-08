@@ -157,7 +157,7 @@ def pick_story():
             story_nap()
         else:
             slow_type("\n"
-                      "That's not a valid option. Try again...\n")
+                      "That's not a valid option. Let's try again...\n")
             pick_story()
 
 
@@ -237,7 +237,8 @@ def story_draw():
                     exit_app()
                 else:
                     slow_type("\n"
-                              "That's not a valid option. Try again...\n")
+                              "That's not a valid option. Let's try again"
+                              "...\n")
         elif int(draw_pick) == 3:
             slow_type("\n"
                       f"\033[1;49;35m{name[0]} went into the school and"
@@ -247,7 +248,7 @@ def story_draw():
             exit_app()
         else:
             slow_type("\n"
-                      "That's not a valid option. Try again...\n")
+                      "That's not a valid option. Let's try again...\n")
             story_draw()
 
 
@@ -272,44 +273,49 @@ def at_school_next_day():
               f" so she decided to go to {name[0]}'s house\n"
               "\n""What do you think will happen?\n""\n"
               "1. Make peace.\n2. It was too late.\n""\n")
-    next_day_selection = input("=> ").strip()
-    if next_day_selection == "1":
-        slow_type("\n"
-                  "They talked and fixed it, and returned to being friends,\n"
-                  "understading their different interests.")
-        clear()
-        exit_app()
-    elif next_day_selection == "2":
-        slow_type("\n"
-                  f"Elizabeth walked to {name[0]}'s house ... but it was too"
-                  " late...\n")
-        clear()
-        slow_type(f"\033[1;49;35mShe knocked on the door and {name[0]} opened"
-                  " and let her in,""\n"
-                  "said was going to get lemonade, so told Elizabeth\n"
-                  "\033[1;49;93m'You can go to my room while I get it'"
-                  "\n"
-                  "\033[1;49;35mBut Elizabeth for some reason headed to "
-                  "the studio" "\n"
-                  "and just as she was sitting at the desk, she saw"
-                  " something that shocked her!\n""\n"
-                  "She couldn't believe it! She had to run to see "
-                  "Jessica now!!\n"
-                  "So she did. When she got to Jessica's home"
-                  " she even didn't \n"
-                  "stop to say hello to her parents, she ran upstairs and \n"
-                  "there she was...Jessica...Just like the drawing"
-                  " in her hand...")
-        clear()
-        slow_type("\033[1;49;35mThere was Jessica in front her eyes, laying \n"
-                  "in bed, tears on her cheeks ...she had no mouth!""\n""\n")
-        print(f"{ascii_img.GIRL}""\n")
-        clear()
-        exit_app()
-    else:
-        slow_type("\n"
-                  "\033[1;49;35mThat's not a valid option. Try again...\n")
-        at_school_next_day()
+    while True:
+        next_day_selection = input("=> ").strip()
+        if not next_day_selection.isdigit():
+            slow_type("\n"
+                      "That's not a valid option. Try again...\n")
+            continue    
+        if next_day_selection == "1":
+            slow_type("\n"
+                      "They talked and fixed it, and returned to being friends,"
+                      "\n understading their different interests.")
+            clear()
+            exit_app()
+        elif next_day_selection == "2":
+            slow_type("\n"
+                      f"Elizabeth walked to {name[0]}'s house ... but it was too"
+                      " late...\n")
+            clear()
+            slow_type(f"\033[1;49;35mShe knocked on the door and {name[0]} opened"
+                    " and let her in,""\n"
+                    "said was going to get lemonade, so told Elizabeth\n"
+                    "\033[1;49;93m'You can go to my room while I get it'"
+                    "\n"
+                    "\033[1;49;35mBut Elizabeth for some reason headed to "
+                    "the studio" "\n"
+                    "and just as she was sitting at the desk, she saw"
+                    " something that shocked her!\n""\n"
+                    "She couldn't believe it! She had to run to see "
+                    "Jessica now!!\n"
+                    "So she did. When she got to Jessica's home"
+                    " she even didn't \n"
+                    "stop to say hello to her parents, she ran upstairs and \n"
+                    "there she was...Jessica...Just like the drawing"
+                    " in her hand...")
+            clear()
+            slow_type("\033[1;49;35mThere was Jessica in front her eyes, laying \n"
+                    "in bed, tears on her cheeks ...she had no mouth!""\n""\n")
+            print(f"{ascii_img.GIRL}""\n")
+            clear()
+            exit_app()
+        else:
+            slow_type("\n"
+                    "\033[1;49;35mThat's not a valid option. Let's try again...\n")
+            at_school_next_day()
 
 
 def story_homework():
@@ -334,6 +340,7 @@ def story_homework():
               f"\033[1;49;35mDo you think it was {name[0]}'s mom? "
               "'y' for yes or 'n' for no \n")
     answer_mom_arrived = input("=> ").strip()
+    
     if answer_mom_arrived == "y":
         clear()
         slow_type("\n"
@@ -429,11 +436,11 @@ def story_homework():
             exit_app()
         else:
             slow_type("\n"
-                      "\nThat's not a valid option. Try again...\n")
+                      "\nThat's not a valid option. Let's try again...\n")
             story_homework()
     else:
         slow_type("\n"
-                  "\nThat's not a valid option. Try again...\n")
+                  "\nThat's not a valid option. Let's try again...\n")
         story_homework()
 
 
