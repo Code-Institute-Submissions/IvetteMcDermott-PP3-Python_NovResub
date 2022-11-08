@@ -162,7 +162,7 @@ def pick_story():
 
 
 def story_draw():
-    """ 
+    """
     Runs the option for the drawing story
     """
     draw_pick = ""
