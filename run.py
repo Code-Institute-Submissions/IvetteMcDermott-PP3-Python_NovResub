@@ -171,7 +171,7 @@ def story_draw():
               "always had a power that\n"
               "had kept secret... whatever drew came true!\n"
               f"Every day {name[0]} had played with Elizabeth, the best friend"
-              "\nanyone could have, they would play on magical creations\n"
+              "\n anyone could have, they would play on magical creations\n"
               f"that came straight from {name[0]}'s imagination.\n"
               "\n")
     print(ascii_img.PRINCESS)
