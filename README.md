@@ -95,10 +95,17 @@ Screeshot of The End screen
 
 ![](https://res.cloudinary.com/dwjq6izv5/image/upload/v1664817558/PP1/PP3%20/end_screen_uh7mnt.png)
 <br>
+The user's inputs had been managed to validate that they are not empty, incorrect data type or an invalid option.
+<br>
 
 ### **Features to implement in future**
 
 More options and twists could be added to it, to increase and extend the adventure. To encourage the users to return.
+<br>
+
+### **Bugs**
+
+Something that I have not being able to find a solution for yet, it is the fact that while the terminal is slow printing if the user generates any input it will come in the terminal in between the printing. But considering the value that the slow print functions gives to this app against it, it had been left that way, hoping to find a solution in a future.
 <br>
 
 ## **Technologies Used**
