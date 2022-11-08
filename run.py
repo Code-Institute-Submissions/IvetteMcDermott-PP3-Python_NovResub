@@ -342,109 +342,127 @@ def story_homework():
               "\n"
               f"\033[1;49;35mDo you think it was {name[0]}'s mom? "
               "'y' for yes or 'n' for no \n")
-    answer_mom_arrived = input("=> ").strip()
-    
-    if answer_mom_arrived == "y":
-        clear()
-        slow_type("\n"
-                  f"\033[1;49;35mYes! Mom was home, and as soon as {name[0]}"
-                  " end the homework,\n"
-                  "they had dinner and saw a family movie, together"
-                  " with dad.")
-        print(ascii_img.FAMILY)
-        clear()
-        exit_app()
-    elif answer_mom_arrived == "n":
-        clear()
-        slow_type("\n"
-                  "\033[1;49;35mRight, no one respond...\n"
-                  "\n"
-                  "\033[1;49;93m'Probably just the wind'"
-                  "\033[1;49;35m thought.\n"
-                  "\nAnd continued with the homework. An hour passed, almost\n"
-                  "finished the first assignment when they faintly heard\n"
-                  "the sounds of pots and pans clanging downstairs.\n"
-                  "But ...\n"
-                  f"{name[0]} hadn't heard mom come in the door.\n"
-                  "\n"
-                  f"Disembodied voice: "
-                  f"\033[1;49;34m{name[0]}...\n"
-                  "\033[1;49;35mA voice called from downstairs\n")
-        clear()
-        slow_type(f"\033[1;49;93m'One second' "
-                  f"\033[1;49;35m{name[0]} distractadly \n"
-                  "responded, while finishing up a final math problem\n"
-                  "\n"
-                  "Disembodied voice: "
-                  f"\033[1;49;34m'{name[0]}...'\n"
-                  "\033[1;49;35mThe voice called again\n"
-                  "\n"
-                  f"Will {name[0]} go downstairs to check or not?"
-                  " 'y' for yes or 'n' for no\n")
-        answer_go_downstairs = input("=> ").strip()
-        clear()
-        if answer_go_downstairs == "n":
+    while True:
+        answer_mom_arrived = input("=> ").strip()
+        if not answer_mom_arrived.isalpha():
             slow_type("\n"
-                      f"\033[1;49;35m{name[0]} realised that the voice "
-                      "did not sound exactly like mom!\n"
-                      "So they called: "
-                      "\033[1;49;93m'Moooom?'\n"
-                      "\033[1;49;35mNo answer... \n"
-                      f"{name[0]} ran and locked the door and hid "
-                      "under the bed...\n"
-                      "Hoping that soon enough someone would arrive.")
-            print(ascii_img.BED)
+                      "That's not a valid option. Try again...\n")
+            continue
+        if answer_mom_arrived == "y":
+            clear()
+            slow_type("\n"
+                      f"\033[1;49;35mYes! Mom was home, and as soon as "
+                      f"{name[0]}"
+                      " end the homework,\n"
+                      "they had dinner and saw a family movie, together"
+                      " with dad.")
+            print(ascii_img.FAMILY)
             clear()
             exit_app()
-        elif answer_go_downstairs == "y":
-            slow_type("\n"
-                      f"\033[1;49;35m{name[0]} closed the books and walked \n"
-                      "downstairs, calling their dog to follow but he "
-                      f"wouldn't budge.\n"
-                      f"{name[0]} shrugged it off and"
-                      " walked  downstairs and into the kitchen.\n"
-                      "\n"
-                      "No one was there but what they saw sent a chill\n"
-                      "down their spine.\n"
-                      "\n"
-                      "Every pot and pan in the house had been stacked\n"
-                      "neatly in the middle of the room.\n"
-                      "Cabinets lay open and empty.\n"
-                      "\n"
-                      "*They heard the sound of a creaking door*")
+        elif answer_mom_arrived == "n":
             clear()
-            slow_type("\033[1;49;35mThe side door flew open beside them.\n"
-                      f"In the doorway stood {name[0]}'s mom, groceries in \n"
-                      "hand. But as if she was only just getting home, \n"
+            slow_type("\n"
+                      "\033[1;49;35mRight, no one respond...\n"
                       "\n"
-                      "\033[1;49;96m'Who laid out the pots and pans?' \n"
-                      "\033[1;49;35mMom looked around "
-                      "at the scattered pots and pans, confused.\n"
-                      "\n"
-                      f"\033[1;49;96m'Are you helping me cook tonight, "
-                      f"{name[0]}?'\n"
-                      "\n"
-                      f"\033[1;49;93m'I didn't do this'\n"
-                      f"\033[1;49;35mreplied {name[0]}, as they and "
-                      "their mom looked around the kitchen…\n"
-                      "\n"
-                      "\033[1;49;96m'Then who did?' \n"
-                      "\033[1;49;35masked mom\n"
+                      "\033[1;49;93m'Probably just the wind'"
+                      "\033[1;49;35m thought.\n"
+                      "\nAnd continued with the homework. An hour passed, "
+                      "almost\n"
+                      "finished the first assignment when they faintly heard\n"
+                      "the sounds of pots and pans clanging downstairs.\n"
+                      "But ...\n"
+                      f"{name[0]} hadn't heard mom come in the door.\n"
                       "\n"
                       f"Disembodied voice: "
-                      f"\033[1;49;34m{name[0]}... dinner is reaaaady")
+                      f"\033[1;49;34m{name[0]}...\n"
+                      "\033[1;49;35mA voice called from downstairs\n")
             clear()
-            print(f"\033[1;49;35m{ascii_img.GHOST}")
+            slow_type(f"\033[1;49;93m'One second' "
+                      f"\033[1;49;35m{name[0]} distractadly \n"
+                      "responded, while finishing up a final math problem\n"
+                      "\n"
+                      "Disembodied voice: "
+                      f"\033[1;49;34m'{name[0]}...'\n"
+                      "\033[1;49;35mThe voice called again\n"
+                      "\n"
+                      f"Will {name[0]} go downstairs to check or not?"
+                      " 'y' for yes or 'n' for no\n")
             clear()
-            exit_app()
-        else:
-            slow_type("\n"
-                      "\nThat's not a valid option. Let's try again...\n")
-            story_homework()
-    else:
-        slow_type("\n"
-                  "\nThat's not a valid option. Let's try again...\n")
-        story_homework()
+            while True:
+                answer_go_downstairs = input("=> ").strip()
+                if not answer_go_downstairs.isalpha():
+                    slow_type("\n"
+                              "That's not a valid option. Try again...\n")
+                    continue
+                if answer_go_downstairs == "n":
+                    slow_type("\n"
+                              f"\033[1;49;35m{name[0]} realised that the voice"
+                              " did not sound exactly like mom!\n"
+                              "So they called: "
+                              "\033[1;49;93m'Moooom?'\n"
+                              "\033[1;49;35mNo answer... \n"
+                              f"{name[0]} ran and locked the door and hid "
+                              "under the bed...\n"
+                              "Hoping that soon enough someone would arrive.")
+                    print(ascii_img.BED)
+                    clear()
+                    exit_app()
+                elif answer_go_downstairs == "y":
+                    slow_type("\n"
+                              f"\033[1;49;35m{name[0]} closed the books and "
+                              "walked \n"
+                              "downstairs, calling their dog to follow but he "
+                              f"wouldn't budge.\n"
+                              f"{name[0]} shrugged it off and"
+                              " walked  downstairs and into the kitchen.\n"
+                              "\n"
+                              "No "
+                              "one was there but what they saw sent a chill\n"
+                              "down their spine.\n"
+                              "\n"
+                              "Every pot and pan in the house had been stacked"
+                              "\n"
+                              "neatly in the middle of the room.\n"
+                              "Cabinets lay open and empty.\n"
+                              "\n"
+                              "*They heard the sound of a creaking door*")
+                    clear()
+                    slow_type("\033[1;49;35mThe side door flew open beside"
+                              " them.\n"
+                              f"In the doorway stood {name[0]}'s mom, bags"
+                              " in \n"
+                              "hand. But as if she was only just getting home,"
+                              "\n"
+                              "\033[1;49;96m'Who laid out the pots and pans?'"
+                              " \n"
+                              "\033[1;49;35mMom looked around "
+                              "at the scattered pots and pans, confused.\n"
+                              "\n"
+                              f"\033[1;49;96m'Are you helping me cook "
+                              f"tonight, {name[0]}?'\n"
+                              "\n"
+                              f"\033[1;49;93m'I didn't do this'\n"
+                              f"\033[1;49;35mreplied {name[0]}, as they and "
+                              "their mom looked around the kitchen…\n"
+                              "\n"
+                              "\033[1;49;96m'Then who did?' \n"
+                              "\033[1;49;35masked mom\n"
+                              "\n"
+                              f"Disembodied voice: "
+                              f"\033[1;49;34m{name[0]}... dinner is reaaaady")
+                    clear()
+                    print(f"\033[1;49;35m{ascii_img.GHOST}")
+                    clear()
+                    exit_app()
+                else:
+                    slow_type("\n \n"
+                              "That's not a valid option. Let's try again..."
+                              "\n")
+                    story_homework()
+            else:
+                slow_type("\n"
+                          "\nThat's not a valid option. Let's try again...\n")
+                story_homework()
 
 
 def story_nap():
