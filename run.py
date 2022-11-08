@@ -278,43 +278,46 @@ def at_school_next_day():
         if not next_day_selection.isdigit():
             slow_type("\n"
                       "That's not a valid option. Try again...\n")
-            continue    
+            continue
         if next_day_selection == "1":
             slow_type("\n"
-                      "They talked and fixed it, and returned to being friends,"
-                      "\n understading their different interests.")
+                      "They talked and fixed it, and returned to being "
+                      "friends,\n" "understading their different interests.")
             clear()
             exit_app()
         elif next_day_selection == "2":
             slow_type("\n"
-                      f"Elizabeth walked to {name[0]}'s house ... but it was too"
-                      " late...\n")
+                      f"Elizabeth walked to {name[0]}'s house ... but it was "
+                      "too late...\n")
             clear()
-            slow_type(f"\033[1;49;35mShe knocked on the door and {name[0]} opened"
-                    " and let her in,""\n"
-                    "said was going to get lemonade, so told Elizabeth\n"
-                    "\033[1;49;93m'You can go to my room while I get it'"
-                    "\n"
-                    "\033[1;49;35mBut Elizabeth for some reason headed to "
-                    "the studio" "\n"
-                    "and just as she was sitting at the desk, she saw"
-                    " something that shocked her!\n""\n"
-                    "She couldn't believe it! She had to run to see "
-                    "Jessica now!!\n"
-                    "So she did. When she got to Jessica's home"
-                    " she even didn't \n"
-                    "stop to say hello to her parents, she ran upstairs and \n"
-                    "there she was...Jessica...Just like the drawing"
-                    " in her hand...")
+            slow_type(f"\033[1;49;35mShe knocked on the door and {name[0]} "
+                      "opened and let her in,""\n"
+                      "said was going to get lemonade, so told Elizabeth\n"
+                      "\033[1;49;93m'You can go to my room while I get it'"
+                      "\n"
+                      "\033[1;49;35mBut Elizabeth for some reason headed to "
+                      "the studio" "\n"
+                      "and just as she was sitting at the desk, she saw"
+                      " something that shocked her!\n""\n"
+                      "She couldn't believe it! She had to run to see "
+                      "Jessica now!!\n"
+                      "So she did. When she got to Jessica's home"
+                      " she even didn't \n"
+                      "stop to say hello to her parents, she ran upstairs and"
+                      " \n"
+                      "there she was...Jessica...Just like the drawing"
+                      " in her hand...")
             clear()
-            slow_type("\033[1;49;35mThere was Jessica in front her eyes, laying \n"
-                    "in bed, tears on her cheeks ...she had no mouth!""\n""\n")
+            slow_type("\033[1;49;35mThere was Jessica in front her eyes, \n"
+                      "laying in bed, tears on her cheeks \n"
+                      "...she had no mouth!""\n")
             print(f"{ascii_img.GIRL}""\n")
             clear()
             exit_app()
         else:
             slow_type("\n"
-                    "\033[1;49;35mThat's not a valid option. Let's try again...\n")
+                      "\033[1;49;35mThat's not a valid option. Let's try again"
+                      "...\n")
             at_school_next_day()
 
 
