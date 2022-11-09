@@ -471,7 +471,8 @@ def story_nap():
               f"\033[1;49;35mIt was night when {name[0]} woke to a strange "
               "noise coming from the closet...\n"
               "The rest of the house was quiet, but that noise..."
-              f"{name[0]} got out the bed and when open the bedroom door...")
+              f"{name[0]} got out the bed and when \n"
+              "open the bedroom door...")
     clear()
     print(f"\033[1;49;35m{ascii_img.MONSTER}")
     clear()

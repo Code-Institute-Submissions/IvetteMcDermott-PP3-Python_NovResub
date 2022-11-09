@@ -34,7 +34,7 @@ As a returning user, I want to see the different endings of the story.
 ### **Flowchart**
 <br>
 
-![](https://share.balsamiq.com/c/rX1TCfGCoBMT2giNVCjCkv.png)
+![](https://res.cloudinary.com/dwjq6izv5/image/upload/v1668028331/PP1/PP3%20/download_vuzwg1.png)
 <br>
 
 ## **Design**
